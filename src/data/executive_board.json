@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Leonard John Davies",
+    "role": "Cofounder, CEO",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Francis Weber",
+    "role": "Vice Chairman",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Kyla Obrien",
+    "role": "Head of Authority",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Adrian Dixon",
+    "role": "Support Executive",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Leonard John Davies",
+    "role": "Cofounder, CEO",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Francis Weber",
+    "role": "Vice Chairman",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Kyla Obrien",
+    "role": "Head of Authority",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Adrian Dixon",
+    "role": "Support Executive",
+    "image": "src/assets/executive_profile_images//profile1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  }
+]
