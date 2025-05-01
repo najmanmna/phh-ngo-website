@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/PHH_LOGO.jpg";
+import DonateButton from "./DonateButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,12 +36,13 @@ const Navbar = () => {
 
         {/* Donate Button */}
         <div className="hidden md:block">
-          <a
+          {/* <a
             href="#donate"
             className="bg-primary text-white text-base font-bold px-8 py-4 rounded-md hover:bg-blue-600"
           >
             Donate
-          </a>
+          </a> */}
+          <DonateButton />
         </div>
 
         {/* Mobile Menu Button */}
