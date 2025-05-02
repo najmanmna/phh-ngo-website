@@ -43,8 +43,8 @@ export default function About() {
             </div>
           </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 m-20">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 m-20 ">
+          <div className="shadow-lg p-8 m-auto h-[260px]">
             <h5 className="uppercase text-sm text-gray-500 tracking-widest mb-2">
               Our Mission
             </h5>
@@ -59,7 +59,7 @@ export default function About() {
             </p>
           </div>
 
-          <div>
+          <div className="shadow-lg p-8 m-auto h-[260px]">
             <h5 className="uppercase text-sm text-gray-500 tracking-widest mb-2">
               Our Vision
             </h5>

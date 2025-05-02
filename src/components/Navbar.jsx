@@ -36,12 +36,7 @@ const Navbar = () => {
 
         {/* Donate Button */}
         <div className="hidden md:block">
-          {/* <a
-            href="#donate"
-            className="bg-primary text-white text-base font-bold px-8 py-4 rounded-md hover:bg-blue-600"
-          >
-            Donate
-          </a> */}
+          
           <DonateButton />
         </div>
 

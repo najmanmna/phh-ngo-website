@@ -1,25 +1,16 @@
-import "./App.css";
-import About from "./components/About";
-import ContactUs from "./components/ContactUs";
-import CTA from "./components/CTA";
-import ExecutiveBoard from "./components/ExecutiveBoard";
-import Hero from "./components/Hero";
-import MessagesCarousel from "./components/MessagesCarousel";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Donate from "./pages/Donate";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <ExecutiveBoard />
-      <CTA />
-      <MessagesCarousel />
-      <ContactUs />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/donate" element={<Donate />} />
+  
+      </Routes>
+    </Router>
   );
 }
 

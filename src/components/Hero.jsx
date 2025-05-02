@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../assets/BG_image.png"; // Replace with actual background image
+import bgImage from "../assets/BG_image.png"; 
 
 const Hero = () => {
   return (
@@ -10,8 +10,7 @@ const Hero = () => {
         backgroundImage: `url(${bgImage})`,
       }}
     >
-      {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-black bg-opacity-60"></div> */}
+     
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-left h-full px-6 md:pl-24">
