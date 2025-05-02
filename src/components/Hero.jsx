@@ -25,7 +25,7 @@ const Hero = () => {
           </p>
           <a
             href="#projects"
-            className="inline-block px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-md hover:bg-cyan-400 hover:text-black transition"
+            className="inline-block px-6 py-3 border-2 border-green-400 text-green-400 font-semibold rounded-md hover:bg-green-400 hover:text-black transition"
           >
             Our Projects
           </a>

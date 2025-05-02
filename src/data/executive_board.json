@@ -2,7 +2,7 @@
   {
     "name": "Leonard John Davies",
     "role": "Cofounder, CEO",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "/executives_images/profile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",
@@ -12,7 +12,7 @@
   {
     "name": "Francis Weber",
     "role": "Vice Chairman",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "/executives_images/profile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",
@@ -22,7 +22,7 @@
   {
     "name": "Kyla Obrien",
     "role": "Head of Authority",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "/executives_images/profile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",
@@ -32,7 +32,7 @@
   {
     "name": "Adrian Dixon",
     "role": "Support Executive",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "src/assets/executive_profile_images/profile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",
@@ -42,7 +42,7 @@
   {
     "name": "Leonard John Davies",
     "role": "Cofounder, CEO",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "src/assets/executive_profile_images/profile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",
@@ -52,7 +52,7 @@
   {
     "name": "Francis Weber",
     "role": "Vice Chairman",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "/executives_images/profile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",
@@ -62,7 +62,7 @@
   {
     "name": "Kyla Obrien",
     "role": "Head of Authority",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "src/assets/executive_profile_images//executives_images/profile1.pngprofile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",
@@ -72,7 +72,7 @@
   {
     "name": "Adrian Dixon",
     "role": "Support Executive",
-    "image": "src/assets/executive_profile_images//profile1.png",
+    "image": "/executives_images/profile1.png",
     "socials": {
       "facebook": "#",
       "twitter": "#",

@@ -31,7 +31,7 @@ export default function Projects() {
                 key={tab}
                 className={`px-6 py-2 text-sm font-medium transition-all duration-300 focus:outline-none ${
                   activeTab === tab
-                    ? "bg-green-500 text-white"
+                    ? "bg-green-400 text-white"
                     : "bg-white text-gray-700 hover:bg-gray-100"
                 }`}
                 onClick={() => setActiveTab(tab)}
