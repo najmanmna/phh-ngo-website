@@ -3,7 +3,7 @@ import AboutImage from "../assets/about_image.png";
 
 export default function About() {
   return (
-    <section className="bg-white py-16 px-4 md:px-12 lg:px-24">
+    <section id="about" className="bg-white py-16 px-4 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center space-x-4 mb-3">
           <span className="w-10 h-[1px] bg-gray-500"></span>

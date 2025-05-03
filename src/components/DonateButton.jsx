@@ -13,7 +13,7 @@ export default function DonateButton() {
     >
       <Link
         to="/donate"
-        className="relative z-10 inline-flex items-center justify-center overflow-hidden text-white bg-gradient-to-br from-pink-500 to-red-500 rounded-full px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+        className="relative z-10 inline-flex items-center justify-center overflow-hidden text-white bg-gradient-to-br from-[#224d2f] to-[#64c76a] rounded-full px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
       >
         <Heart className="mr-2 w-4 h-4" />
         Donate Now

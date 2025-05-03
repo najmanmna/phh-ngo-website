@@ -1,5 +1,5 @@
 import React from "react";
-import CTA_bg from "../assets/BG_image.png";
+import CTA_bg from "/hero_bgs/bg1.png";
 import DonateButton from "./DonateButton";
 
 const CTA = () => {
