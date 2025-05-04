@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Winter Clothing Drive",
+    "description": "Distributed warm clothes to over 500 individuals in underserved areas during peak winter.",
+    "image": "/project_cover_images/project1.jpg"
+  },
+  {
+    "title": "Blood Donation Camp",
+    "description": "Organized a blood donation drive in collaboration with local hospitals, collecting 200+ units.",
+    "image": "/project_cover_images/project3.jpg"
+  },
+  {
+    "title": "Flood Relief Operation",
+    "description": "Provided emergency supplies and medical aid to flood-affected regions.",
+    "image": "/project_cover_images/project2.jpg"
+  },
+  {
+    "title": "Eye Checkup Camp",
+    "description": "Free vision screening and spectacles distribution for underprivileged communities.",
+    "image": "/project_cover_images/project2.jpg"
+  },
+  {
+    "title": "Winter Clothing Drive",
+    "description": "Distributed warm clothes to over 500 individuals in underserved areas during peak winter.",
+    "image": "/project_cover_images/project2.jpg"
+  },
+  {
+    "title": "Blood Donation Camp",
+    "description": "Organized a blood donation drive in collaboration with local hospitals, collecting 200+ units.",
+    "image": "/project_cover_images/project3.jpg"
+  },
+  {
+    "title": "Flood Relief Operation",
+    "description": "Provided emergency supplies and medical aid to flood-affected regions.",
+    "image": "/project_cover_images/project1.jpg"
+  },
+  {
+    "title": "Eye Checkup Camp",
+    "description": "Free vision screening and spectacles distribution for underprivileged communities.",
+    "image": "/project_cover_images/project2.jpg"
+  }
+]

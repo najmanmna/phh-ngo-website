@@ -46,14 +46,14 @@ export default function About() {
         </div>
 
         {/* Newsletter + Video */}
-        <div className="grid md:grid-cols-2 gap-10 items-start content-center md:p-10">
+        <div className="grid md:grid-cols-2 bg-primary rounded-md gap-10 items-start content-center md:p-10">
           {/* Newsletter Section */}
           <div className=" p-8 md:p-12  self-center">
-            <div className="flex items-center gap-3 mb-4 text-darkblue">
+            <div className="flex items-center gap-3 mb-4 text-gray-300">
               <FileText size={32} />
               <h3 className="text-2xl md:text-3xl font-semibold">View Our Newsletter</h3>
             </div>
-            <p className="text-gray-600 text-[16px] leading-relaxed mb-6 mt-6">
+            <p className="text-gray-300 text-[16px] leading-relaxed mb-6 mt-6">
               Stay updated with our latest initiatives, success stories, and
               future goals. Our official newsletter captures the heart of our
               journey.
@@ -62,7 +62,7 @@ export default function About() {
               href={newsletterPDF}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2  bg-darkblue  hover:bg-blue-800 text-white font-medium py-2.5 px-5 rounded-xl shadow-md transition"
+              className="inline-flex items-center gap-2  bg-green-600  hover:bg-green-500 text-white font-medium py-2.5 px-5 rounded-xl shadow-md transition"
             >
               <Eye size={18} />
               View Newsletter
@@ -86,9 +86,9 @@ export default function About() {
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-16 px-4">
           {/* Mission */}
-          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
             <h5 className="uppercase text-sm text-darkblue font-semibold tracking-widest mb-2">
               Our Mission
             </h5>
@@ -103,7 +103,7 @@ export default function About() {
           </div>
 
           {/* Vision */}
-          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
             <h5 className="uppercase text-sm text-darkblue font-semibold tracking-widest mb-2">
               Our Vision
             </h5>

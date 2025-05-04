@@ -14,5 +14,5 @@ export default {
       scrollBehavior: ["responsive"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

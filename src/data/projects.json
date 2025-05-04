@@ -3,32 +3,32 @@
     "type": "ongoing",
     "title": "Mission smile 1k: Outdoor charity",
     "description": "Providing meals and medical care to underserved communities every month.",
-    "image": "/project_cover_images/BG_image.png",
+    "image": "/project_cover_images/project1.jpg",
     "link": "#"
   },
   {
     "type": "ongoing",
     "title": "Weekly excursions",
     "description": "Organizing field trips for hospitalized children to improve mental well-being.",
-    "image": "/project_cover_images/BG_image.png",
+    "image": "/project_cover_images/project2.jpg",
     "link": "#"
   },
   {
     "type": "ongoing",
     "title": "Monthly public awareness",
     "description": "Spreading health knowledge through seminars and campaigns in public areas.",
-    "image": "/project_cover_images/BG_image.png",
+    "image": "/project_cover_images/project3.jpg",
     "link": "#"
   },
   {
-    "type": "past",
+    "type": "ongoing",
     "title": "Free medical camp 2023",
     "description": "Held a full-day camp with free diagnostics and consultations in underprivileged zones.",
     "image": "/project_cover_images/BG_image.png",
     "link": "#"
   },
   {
-    "type": "future",
+    "type": "ongoing",
     "title": "Digital health literacy",
     "description": "Launching a platform to educate patients and families about disease prevention.",
     "image": "/project_cover_images/BG_image.png",
