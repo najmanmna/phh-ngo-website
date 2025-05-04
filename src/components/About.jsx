@@ -1,75 +1,119 @@
-import React from "react";
-import AboutImage from "../assets/about_image.png";
+import React, { useRef, useEffect, useState } from "react";
+import { FileText, Eye } from "lucide-react"; // optional icon lib
 
 export default function About() {
+  const videoRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0.5 }
+    );
+
+    if (videoRef.current) observer.observe(videoRef.current);
+    return () => {
+      if (videoRef.current) observer.unobserve(videoRef.current);
+    };
+  }, []);
+
+  const newsletterPDF = "/newsletter.pdf";
+
   return (
-    <section id="about" className="bg-white py-16 px-4 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center space-x-4 mb-3">
-          <span className="w-10 h-[1px] bg-gray-500"></span>
-          <h4 className="uppercase text-xs tracking-widest text-gray-500">
+    
+    <section
+      id="about"
+      className="py-20 px-4 md:px-12 lg:px-24"
+      style={{
+        backgroundColor: "#ffffff",
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23224d2f' fill-opacity='0.26' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")`,
+      }}
+    >
+      <div className="max-w-7xl mx-auto space-y-10">
+        {/* Heading & Description */}
+        <div className="text-center">
+          {/* <h4 className="uppercase text-sm tracking-widest text-blue-600 font-medium mb-3">
             Know About Us
-          </h4>
+          </h4> */}
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-800 leading-tight">
+            We are a Non-Governmental Organization
+          </h2>
+          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto">
+            Patients Helping Hands (PHH) is a student-run NGO at Sindh Medical
+            College, serving patients at NICH, NICVD, and JPMC through
+            compassion and collective effort.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-12 m-20">
-          <div>
-            <h2 className="text-5xl font-extrabold text-gray-600 leading-tight mb-4">
-              We are a <br /> non-governmental <br /> organization
-            </h2>
-          </div>
-          <div className="text-gray-700 text-[17px] leading-relaxed">
-            <p>
-              Patients Helping Hands (PHH) is a student-operated NGO at Sindh
-              Medical College, dedicated to supporting patients in need. Through
-              compassion, service, and collective effort, we extend care across
-              three major hospitals: National Institute of Child Health (NICH),
-              National Institute of Cardiovascular Diseases (NICVD), and Jinnah
-              Postgraduate Medical Centre (JPMC). Our mission is simple — to
-              serve humanity with empathy and action.
-            </p>
-          </div>
-        </div>
-        <div className="rounded-2xl overflow-hidden mb-16">
-            <div className="relative w-full h-[350px] md:h-[420px] lg:h-[480px]">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/h9f9gY4Fy8k?autoplay=1&=1&controls=0&modestbranding=1&rel=0&showinfo=0"
-                title="PHH Video"
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-              ></iframe>
+        {/* Newsletter + Video */}
+        <div className="grid md:grid-cols-2 gap-10 items-start content-center md:p-10">
+          {/* Newsletter Section */}
+          <div className=" p-8 md:p-12  self-center">
+            <div className="flex items-center gap-3 mb-4 text-darkblue">
+              <FileText size={32} />
+              <h3 className="text-2xl md:text-3xl font-semibold">View Our Newsletter</h3>
             </div>
+            <p className="text-gray-600 text-[16px] leading-relaxed mb-6 mt-6">
+              Stay updated with our latest initiatives, success stories, and
+              future goals. Our official newsletter captures the heart of our
+              journey.
+            </p>
+            <a
+              href={newsletterPDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2  bg-darkblue  hover:bg-blue-800 text-white font-medium py-2.5 px-5 rounded-xl shadow-md transition"
+            >
+              <Eye size={18} />
+              View Newsletter
+            </a>
           </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 m-20 ">
-          <div className="shadow-lg p-8 m-auto h-[260px]">
-            <h5 className="uppercase text-sm text-gray-500 tracking-widest mb-2">
+          {/* Video Section */}
+          <div
+            ref={videoRef}
+            className={`rounded-xl overflow-hidden w-full h-64 md:h-80 lg:h-[350px] transition-opacity duration-700`}
+          >
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/h9f9gY4Fy8k?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0"
+              title="PHH Video"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
+        {/* Mission & Vision */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Mission */}
+          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <h5 className="uppercase text-sm text-darkblue font-semibold tracking-widest mb-2">
               Our Mission
             </h5>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-              We make sure to provide inclusive care for children with special
-              needs
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Inclusive care for children with special needs
             </h3>
             <p className="text-gray-600 text-[15px] leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla.
+              We aim to support underprivileged patients, especially children
+              with chronic conditions, ensuring they get holistic care and
+              dignity through student-led efforts.
             </p>
           </div>
 
-          <div className="shadow-lg p-8 m-auto h-[260px]">
-            <h5 className="uppercase text-sm text-gray-500 tracking-widest mb-2">
+          {/* Vision */}
+          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <h5 className="uppercase text-sm text-darkblue font-semibold tracking-widest mb-2">
               Our Vision
             </h5>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-              Provide more inclusive care to children around the world
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Expanding compassionate care across communities
             </h3>
             <p className="text-gray-600 text-[15px] leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla.
+              We envision a future where no patient is left behind — where
+              students become a pillar of hope and action across Pakistan and
+              beyond.
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default {
       colors: {
         primary: "#224d2f",
         secondary: "#64c76a",
-        dark: "#1E1E1E",
+        darkblue: "#032564",
         light: "#F7F7F7",
       },
       scrollBehavior: ["responsive"],

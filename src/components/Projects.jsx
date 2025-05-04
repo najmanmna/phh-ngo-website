@@ -11,7 +11,10 @@ export default function Projects() {
   );
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white " style={{
+        backgroundColor: "#ffffff",
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23224d2f' fill-opacity='0.26' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")`,
+      }}>
       <div className="max-w-7xl mx-auto px-4 text-center">
         <div className="flex items-center space-x-4 mb-4">
           <span className="w-10 h-[1px] bg-gray-600"></span>
