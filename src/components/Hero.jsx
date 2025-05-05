@@ -26,7 +26,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative w-full h-[60vh] sm:h-[50vh] md:h-[90vh] overflow-hidden">
+    <section
+      id="home"
+      className="relative w-full h-[60vh] sm:h-[70vh] md:h-[90vh] overflow-hidden"
+    >
       {/* Background Slideshow */}
       {slidesdata.map((slide, index) => (
         <div
@@ -43,17 +46,29 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-left h-full px-6 md:pl-24">
-        <div className="text-white max-w-2xl space-y-6 text-center md:text-left transition-all duration-1000">
+        <div
+          className={`text-white max-w-2xl space-y-6 text-center md:text-left transition-all duration-1000 ${
+            slidesdata[current].customPadding || ""
+          }`}
+        >
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             {slidesdata[current].heading}
           </h1>
-          <p className="text-base md:text-lg">{slidesdata[current].subtext}</p>
-          <a
-            href="#about"
-            className="inline-block px-6 py-3 border-2 border-secondary text-secondary font-semibold rounded-md hover:bg-secondary hover:text-black transition"
-          >
-            About Us
-          </a>
+
+          {slidesdata[current].showSubtext && (
+            <p className="text-base md:text-lg">
+              {slidesdata[current].subtext}
+            </p>
+          )}
+
+          {slidesdata[current].showButton && (
+            <a
+              href="#about"
+              className="inline-block px-6 py-3 border-2 border-secondary text-secondary font-semibold rounded-md hover:bg-secondary hover:text-black transition"
+            >
+              About Us
+            </a>
+          )}
         </div>
       </div>
 

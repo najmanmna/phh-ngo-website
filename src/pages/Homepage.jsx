@@ -16,7 +16,7 @@ function Homepage() {
       <About />
       <Projects />
       <ProjectHighlights />
-      <ExecutiveBoard />
+      {/* <ExecutiveBoard /> */}
       <CTA />
       <MessagesCarousel />
       <ContactUs />

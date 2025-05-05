@@ -46,14 +46,14 @@ export default function About() {
         </div>
 
         {/* Newsletter + Video */}
-        <div className="grid md:grid-cols-2 bg-primary rounded-md gap-10 items-start content-center md:p-10">
+        <div className="grid  md:grid-cols-2 sm:bg-primary rounded-md gap-10 items-start content-center md:p-10">
           {/* Newsletter Section */}
-          <div className=" p-8 md:p-12  self-center">
-            <div className="flex items-center gap-3 mb-4 text-gray-300">
+          <div className="order-2 md:order-1 bg-primary p-8 md:p-12  self-center">
+            <div className="flex items-center gap-3 mb-4 text-gray-200">
               <FileText size={32} />
               <h3 className="text-2xl md:text-3xl font-semibold">View Our Newsletter</h3>
             </div>
-            <p className="text-gray-300 text-[16px] leading-relaxed mb-6 mt-6">
+            <p className="text-gray-200 text-[16px] leading-relaxed mb-6 mt-6">
               Stay updated with our latest initiatives, success stories, and
               future goals. Our official newsletter captures the heart of our
               journey.
@@ -72,7 +72,7 @@ export default function About() {
           {/* Video Section */}
           <div
             ref={videoRef}
-            className={`rounded-xl overflow-hidden w-full h-64 md:h-80 lg:h-[350px] transition-opacity duration-700`}
+            className={`rounded-xl order-1 md:order-2 overflow-hidden w-full h-64 md:h-80 lg:h-[350px] transition-opacity duration-700`}
           >
             <iframe
               className="w-full h-full"

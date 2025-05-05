@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 function Donate() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="donate" />
       <h1 className="text-center text-6xl mt-36">Donation Page</h1>
     </>
   );

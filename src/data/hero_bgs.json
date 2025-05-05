@@ -1,18 +1,31 @@
 [
-    {
-      "image": "/hero_bgs/bg1.png",
-      "heading": "Lend a Hand to Make a Difference",
-      "subtext": "Patients Helping Hands – SMC student-operated NGO working for the welfare of patients at JPMC and NICH, Karachi."
-    },
-    {
-      "image": "/hero_bgs/bg2.jpg",
-      "heading": "Every Donation Counts",
-      "subtext": "Join hands with us to bring comfort and care to the ones who need it the most."
-    },
-    {
-      "image": "/hero_bgs/bg3.jpg",
-      "heading": "Together, We Heal",
-      "subtext": "Empowering patients through student-led action and compassion."
-    }
-  ]
-  
+  {
+    "image": "/hero_bgs/bg1.jpg",
+    "heading": "Lend a Hand to Make a Difference",
+    "subtext": "Patients Helping Hands Welfare Association – A student-operated non-profit NGO working for welfare of patients at JPMC, NICH and NICVD, Karachi, Pakistan",
+    "showSubtext": true,
+    "showButton": true
+  },
+  {
+    "image": "/hero_bgs/bg2_4.png",
+    "heading": "",
+    "subtext": "",
+    "showSubtext": false,
+    "showButton": false
+  },
+  {
+    "image": "/hero_bgs/bg3.png",
+    "heading": "",
+    "subtext": "",
+    "showSubtext": true,
+    "showButton": false
+  },
+  {
+    "image": "/hero_bgs/bg4.png",
+    "heading": "Together, We share hope and smiles",
+    "subtext": "",
+    "showSubtext": false,
+    "showButton": false,
+    "customPadding": "md:pl-32"
+  }
+]

@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/PHH_LOGO.jpg";
 import DonateButton from "./DonateButton";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ variant }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const isDonatePage = variant === "donate";
 
   return (
     <header className="bg-white shadow-md">
@@ -18,56 +19,63 @@ const Navbar = () => {
             <img
               src={logo}
               alt="PHH Logo"
-              className="w-16 h-16 object-contain sm:w-[80px] md:w-[100px] md:h-24 "
+              className="w-16 h-16 object-contain sm:w-[80px] md:w-[100px] md:h-24"
             />
           </Link>
 
-          <div className="text-left leading-5 md:leading-8 cursor-none ">
+          <div className="text-left leading-5 md:leading-8">
             <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[24px]">
               Patients Helping Hands
             </h1>
-            {/* <h1 className="text-primary font-bold text-[24px] md:text-[14px]"></h1>
-            <h1 className="text-primary font-bold text-[24px] md:text-[14px]"></h1> */}
-            <h3 className="text-primary font-extrabold font text-[14px] sm:text-[18px] md:text-[24px]">
+            <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[24px]">
               Welfare Association
             </h3>
-            {/* <h3 className="text-primary font-bold text-[24px] md:text-[14px]"></h3> */}
           </div>
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-6 text-lg font-medium text-gray-800 sm:space-x-">
+        <ul className="hidden md:flex space-x-6 text-lg font-medium text-gray-800">
           <li>
-            <a href="#home" className="hover:text-secondary transition">
+            <a
+              href={isDonatePage ? "/" : "#home"}
+              className="hover:text-secondary transition"
+            >
               Home
             </a>
           </li>
-          <li>
-            <a href="#about" className="hover:text-secondary transition">
-              About us
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-secondary transition">
-              Our Projects
-            </a>
-          </li>
-          <li>
-            <a href="#team" className="hover:text-secondary transition">
-              Our Team
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-secondary transition">
-              Contact
-            </a>
-          </li>
+          {!isDonatePage && (
+            <>
+
+              <li>
+                <a href="#about" className="hover:text-secondary transition">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-secondary transition">
+                  Our Projects
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="hover:text-secondary transition">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-secondary transition">
+                  Contact
+                </a>
+              </li>
+            </>
+          )}
         </ul>
 
         {/* Donate Button */}
-        <div className="hidden md:block">
-          <DonateButton />
-        </div>
+        {!isDonatePage && (
+          <div className="hidden md:block">
+            <DonateButton />
+          </div>
+        )}
 
         {/* Mobile Menu Button */}
         <button onClick={toggleMenu} className="md:hidden">
@@ -78,27 +86,34 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-4 text-gray-800 font-medium bg-white shadow-md">
-          <a href="#home" className="block hover:text-secondary">
+          <a
+            href={isDonatePage ? "/" : "#home"}
+            className="block hover:text-secondary"
+          >
             Home
           </a>
-          <a href="#about" className="block hover:text-secondary">
-            About us
-          </a>
-          <a href="#projects" className="block hover:text-secondary">
-            Our Projects
-          </a>
-          <a href="#board" className="block hover:text-secondary">
-            Our Team
-          </a>
-          <a href="#contact" className="block hover:text-secondary">
-            Contact
-          </a>
-          <a
-            href="#donate"
-            className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
-          >
-            Donate
-          </a>
+          {!isDonatePage && (
+            <>
+              <a href="#about" className="block hover:text-secondary">
+                About us
+              </a>
+              <a href="#projects" className="block hover:text-secondary">
+                Our Projects
+              </a>
+              <a href="#team" className="block hover:text-secondary">
+                Our Team
+              </a>
+              <a href="#contact" className="block hover:text-secondary">
+                Contact
+              </a>
+              <a
+                href="#donate"
+                className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >
+                Donate
+              </a>
+            </>
+          )}
         </div>
       )}
     </header>
