@@ -11,7 +11,7 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="bg-[#0f3d2e] text-white px-6 py-12">
+    <section id="contact" className="bg-[#0f3d2e] text-white px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Left Column */}
         <div className="space-y-4">

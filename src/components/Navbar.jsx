@@ -48,8 +48,6 @@ const Navbar = ({ variant }) => {
           </li>
           {!isDonatePage && (
             <>
-
-
               <li>
                 <a href="#about" className="hover:text-secondary transition">
                   About us
@@ -110,12 +108,14 @@ const Navbar = ({ variant }) => {
               <a href="#contact" className="block hover:text-secondary">
                 Contact
               </a>
-              <a
-                href="#donate"
-                className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
-              >
-                Donate
-              </a>
+              <Link to="/donate">
+                <a
+                  href="#donate"
+                  className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                >
+                  Donate
+                </a>
+              </Link>
             </>
           )}
         </div>

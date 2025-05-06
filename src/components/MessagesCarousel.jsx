@@ -3,16 +3,28 @@ import messages from "../data/messages.json";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 export default function MessagesCarousel() {
-  const [current, setCurrent] = useState(0);
+  const [index, setIndex] = useState(0);
   const total = messages.length;
 
-  const prev = () => setCurrent((current - 1 + total) % total);
-  const next = () => setCurrent((current + 1) % total);
+  const showMessages = () => {
+    // Get current and next message, wrapping if needed
+    const first = messages[index];
+    const second = messages[(index + 1) % total];
+    return [first, second];
+  };
+
+  const next = () => {
+    setIndex((prev) => (prev + 2) % total);
+  };
+
+  const prev = () => {
+    setIndex((prev) => (prev - 2 + total) % total);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % total);
-    }, 3000); // Change slide every 5 seconds
+      setIndex((prev) => (prev + 2) % total);
+    }, 8000);
     return () => clearInterval(interval);
   }, [total]);
 
@@ -21,31 +33,34 @@ export default function MessagesCarousel() {
       <div className="flex items-center justify-left space-x-4 ml-3 mb-4 md:ml-24">
         <span className="w-10 h-[2px] bg-gray-600"></span>
         <h4 className="uppercase text-xs tracking-widest text-gray-600">
-          Voices of Support
+          Testimonials
         </h4>
       </div>
-      <div className="max-w-4xl mx-auto  text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-10 text-gray-800">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-2xl md:text-4xl font-bold mb-10 text-primary">
           Messages from Notable People
         </h2>
 
         <div className="relative">
-          <div className="bg-white p-8 rounded-2xl shadow-lg w-[280px] md:w-[480px] md:h-[360px] mx-auto flex flex-col justify-between">
-            <Quote className="text-green-500 w-8 h-8 mx-auto mb-4" />
-            <p className="text-gray-700 italic mb-6">
-              "{messages[current].message}"
-            </p>
-            <div className="flex flex-col items-center">
-              <img
-                src={messages[current].photo}
-                alt={messages[current].name}
-                className="w-16 h-16 object-cover rounded-full mb-2"
-              />
-              <p className="font-semibold text-gray-800">
-                {messages[current].name}
-              </p>
-              <p className="text-sm text-gray-500">{messages[current].title}</p>
-            </div>
+          <div className="flex justify-center gap-8 flex-wrap transition-all duration-500">
+            {showMessages().map((msg, i) => (
+              <div
+                key={`${msg.name}-${i}`}
+                className="bg-white p-8 rounded-2xl shadow-lg w-[280px] md:w-[480px] md:h-[520px] flex flex-col justify-between"
+              >
+                <Quote className="text-green-500 w-8 h-8 mx-auto mb-4" />
+                <p className="text-gray-700 italic mb-6">"{msg.message}"</p>
+                <div className="flex flex-col items-center">
+                  <img
+                    src={msg.photo}
+                    alt={msg.name}
+                    className="w-16 h-16 object-cover rounded-full mb-2"
+                  />
+                  <p className="font-semibold text-primary">{msg.name}</p>
+                  <p className="text-sm text-gray-500">{msg.title}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Controls */}
