@@ -37,7 +37,7 @@ export default function ProjectHighlights() {
 
   return (
     <section className="relative w-full py-14 bg-green-900 overflow-hidden">
-      {/* <h2 className="text-center text-white text-3xl font-semibold mb-8">Project Highlights</h2> */}
+      <h2 className="text-center text-white text-3xl font-semibold mb-8">One time Projects</h2>
 
       <div className="relative w-full overflow-hidden">
         <div

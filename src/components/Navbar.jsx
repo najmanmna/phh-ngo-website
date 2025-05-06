@@ -23,13 +23,16 @@ const Navbar = ({ variant }) => {
             />
           </Link>
 
-          <div className="text-left leading-5 md:leading-8">
-            <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[24px]">
+          <div className="text-left leading-5 md:leading-7">
+            <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[22px]">
               Patients Helping Hands
             </h1>
-            <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[24px]">
+            <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[22px]">
               Welfare Association
             </h3>
+            <p className="text-primary ml-[3px] leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
+              Est. 2011
+            </p>
           </div>
         </div>
 
@@ -45,6 +48,7 @@ const Navbar = ({ variant }) => {
           </li>
           {!isDonatePage && (
             <>
+
 
               <li>
                 <a href="#about" className="hover:text-secondary transition">

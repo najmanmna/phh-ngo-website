@@ -15,9 +15,9 @@
   },
   {
     "image": "/hero_bgs/bg3.png",
-    "heading": "",
+    "heading": "Celebrating 14 years of PHHWA ",
     "subtext": "",
-    "showSubtext": true,
+    "showSubtext": false,
     "showButton": false
   },
   {
@@ -26,6 +26,6 @@
     "subtext": "",
     "showSubtext": false,
     "showButton": false,
-    "customPadding": "md:pl-32"
+    "customPadding": "mr-32"
   }
 ]

@@ -17,10 +17,9 @@ export default function About() {
     };
   }, []);
 
-  const newsletterPDF = "/newsletter.pdf";
+  const newsletterPDF = "/Phh newsletter.pdf";
 
   return (
-    
     <section
       id="about"
       className="py-20 px-4 md:px-12 lg:px-24"
@@ -31,17 +30,29 @@ export default function About() {
     >
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Heading & Description */}
-        <div className="text-center">
-          {/* <h4 className="uppercase text-sm tracking-widest text-blue-600 font-medium mb-3">
-            Know About Us
-          </h4> */}
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-800 leading-tight">
-            We are a Non-Governmental Organization
+        <div className="flex items-center space-x-4 mb-4 justify-left">
+          <span className="w-10 h-[1px] bg-gray-600"></span>
+          <h4 className="uppercase text-xs tracking-widest text-gray-600">
+            A look into our mission
+          </h4>
+        </div>
+        <div className="flex-col flex md:flex-row  items-center justify-center md:gap-x-32 md:ml-28">
+          {" "}
+          <h2 className="text-3xl text-center  sm:text-6xl font-extrabold text-primary leading-tight">
+            About Us
           </h2>
-          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto">
-            Patients Helping Hands (PHH) is a student-run NGO at Sindh Medical
-            College, serving patients at NICH, NICVD, and JPMC through
-            compassion and collective effort.
+          <p className="mt-5 ml-5 text-gray-600 text-lg max-w-3xl mx-auto">
+            Patients Helping Hands (PHH) is a non-profit, student-run
+            organization from Jinnah Sindh Medical University. Founded in 2011
+            by a group of passionate medical students, PHH is dedicated to
+            supporting underprivileged patients through compassion, service, and
+            collective action. Operating across three major public hospitals in
+            Karachi—Jinnah Postgraduate Medical Centre (JPMC), the National
+            Institute of Child Health (NICH), and the National Institute of
+            Cardiovascular Diseases (NICVD)—PHH works to bridge the gap between
+            patients in need and timely medical support. Through tireless
+            volunteer efforts, we continue to serve humanity with empathy, hope,
+            and hands-on care.
           </p>
         </div>
 
@@ -51,7 +62,9 @@ export default function About() {
           <div className="order-2 md:order-1 bg-primary p-8 md:p-12  self-center">
             <div className="flex items-center gap-3 mb-4 text-gray-200">
               <FileText size={32} />
-              <h3 className="text-2xl md:text-3xl font-semibold">View Our Newsletter</h3>
+              <h3 className="text-2xl md:text-3xl font-semibold">
+                Read Our Newsletter
+              </h3>
             </div>
             <p className="text-gray-200 text-[16px] leading-relaxed mb-6 mt-6">
               Stay updated with our latest initiatives, success stories, and
@@ -87,33 +100,33 @@ export default function About() {
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-16 px-4">
-          {/* Mission */}
+          {/* Vision */}
           <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
-            <h5 className="uppercase text-sm text-darkblue font-semibold tracking-widest mb-2">
-              Our Mission
+            <h5 className="uppercase text-sm text-primary font-semibold tracking-widest mb-2">
+              Our Vision
             </h5>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Inclusive care for children with special needs
-            </h3>
             <p className="text-gray-600 text-[15px] leading-relaxed">
-              We aim to support underprivileged patients, especially children
-              with chronic conditions, ensuring they get holistic care and
-              dignity through student-led efforts.
+              At PHH, our vision is to ensure that every patient at JPMC has
+              access to free, quality healthcare, regardless of their background
+              or circumstances. We are committed to bridging the gap between
+              need and care, so that no one is denied the treatment they
+              deserve.
             </p>
           </div>
 
-          {/* Vision */}
+          {/* Mission */}
           <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
-            <h5 className="uppercase text-sm text-darkblue font-semibold tracking-widest mb-2">
-              Our Vision
+            <h5 className="uppercase text-sm text-primary font-semibold tracking-widest mb-2">
+              Our Mission
             </h5>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Expanding compassionate care across communities
-            </h3>
+
             <p className="text-gray-600 text-[15px] leading-relaxed">
-              We envision a future where no patient is left behind — where
-              students become a pillar of hope and action across Pakistan and
-              beyond.
+              PHH’s mission is to serve as a gateway for medical students at
+              Jinnah Sindh Medical University and community members to reach and
+              support those in need at JPMC. Through this journey of service, we
+              aim not only to help the underserved but also to shape
+              compassionate individuals, creating better humans alongside better
+              doctors.
             </p>
           </div>
         </div>

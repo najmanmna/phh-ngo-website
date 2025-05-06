@@ -1,51 +1,43 @@
 [
-  {
-    "type": "ongoing",
-    "title": "Mission smile 1k: Outdoor charity",
-    "description": "Providing meals and medical care to underserved communities every month.",
-    "image": "/project_cover_images/project1.jpg",
-    "link": "#"
-  },
-  {
-    "type": "ongoing",
-    "title": "Weekly excursions",
-    "description": "Organizing field trips for hospitalized children to improve mental well-being.",
-    "image": "/project_cover_images/project2.jpg",
-    "link": "#"
-  },
-  {
-    "type": "ongoing",
-    "title": "Monthly public awareness",
-    "description": "Spreading health knowledge through seminars and campaigns in public areas.",
-    "image": "/project_cover_images/project3.jpg",
-    "link": "#"
-  },
-  {
-    "type": "ongoing",
-    "title": "Free medical camp 2023",
-    "description": "Held a full-day camp with free diagnostics and consultations in underprivileged zones.",
-    "image": "/project_cover_images/BG_image.png",
-    "link": "#"
-  },
-  {
-    "type": "ongoing",
-    "title": "Digital health literacy",
-    "description": "Launching a platform to educate patients and families about disease prevention.",
-    "image": "/project_cover_images/BG_image.png",
-    "link": "#"
-  },
-  {
-    "type": "future",
-    "title": "Digital health literacy",
-    "description": "Launching a platform to educate patients and families about disease prevention.",
-    "image": "/project_cover_images/BG_image.png",
-    "link": "#"
-  },
-  {
-    "type": "future",
-    "title": "Digital health literacy",
-    "description": "Launching a platform to educate patients and families about disease prevention.",
-    "image": "/project_cover_images/BG_image.png",
-    "link": "#"
-  }
-]
+    {
+      "id": "mission-smile-1k",
+      "type": "ongoing",
+      "title": "Mission smile 1k: Outdoor charity",
+      "description": "Providing meals and medical care to underserved communities every month.",
+      "image": "/project_cover_images/project1.jpg",
+      "link": "/projects/mission-smile-1k"
+    },
+    {
+      "id": "weekly-excursions",
+      "type": "ongoing",
+      "title": "Weekly excursions",
+      "description": "Organizing field trips for hospitalized children to improve mental well-being.",
+      "image": "/project_cover_images/project2.jpg",
+      "link": "/projects/weekly-excursions"
+    },
+    {
+      "id": "monthly-public-awareness",
+      "type": "ongoing",
+      "title": "Monthly public awareness",
+      "description": "Spreading health knowledge through seminars and campaigns in public areas.",
+      "image": "/project_cover_images/project3.jpg",
+      "link": "/projects/monthly-public-awareness"
+    },
+    {
+      "id": "free-medical-camp-2023",
+      "type": "ongoing",
+      "title": "Free medical camp 2023",
+      "description": "Held a full-day camp with free diagnostics and consultations in underprivileged zones.",
+      "image": "/project_cover_images/BG_image.png",
+      "link": "/projects/free-medical-camp-2023"
+    },
+    {
+      "id": "digital-health-literacy",
+      "type": "ongoing",
+      "title": "Digital health literacy",
+      "description": "Launching a platform to educate patients and families about disease prevention.",
+      "image": "/project_cover_images/BG_image.png",
+      "link": "/projects/digital-health-literacy"
+    }
+  ]
+  
