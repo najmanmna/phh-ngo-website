@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 const donationMethods = [
-  "Bank Accounts",
+  "Bank Detailss",
   "Donate via Courier",
   "In Hand Donation",
   "Doorstep Collection",
@@ -51,7 +51,7 @@ function Donate() {
 
           {/* Content */}
           <div className="flex-1 bg-primary text-white rounded-xl p-6 shadow-md text-sm md:text-base leading-relaxed">
-            {activeMethod === "Bank Accounts" && (
+            {activeMethod === "Bank Details" && (
               <div>
                 <p className="mb-4">
                   You can directly deposit or transfer the amount in the
@@ -90,8 +90,8 @@ function Donate() {
             {activeMethod === "In Hand Donation" && (
               <div className="space-y-4">
                 <p className="font-semibold">
-                  Feel free to visit our office or JSMU, Karachi, between
-                  9:00am to 3:00pm (Mon–Sat) to donate.
+                  Feel free to visit our office or JSMU, Karachi, between 9:00am
+                  to 3:00pm (Mon–Sat) to donate.
                 </p>
                 <div className="flex items-start space-x-3">
                   <FaMapMarkerAlt className="mt-1 text-secondary" />
