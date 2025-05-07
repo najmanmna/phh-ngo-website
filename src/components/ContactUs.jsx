@@ -15,7 +15,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Left Column */}
         <div className="space-y-4">
-          <img src="/PHH_LOGO.jpg" alt="PHH Logo" className="w-32" />
+          <img src="/phh_logo_b.png" alt="PHH Logo" className="w-40 border border-5 border-lime-200" />
           <p className="text-lg font-medium leading-relaxed">
             Join us in lending a hand so we can make a difference together
           </p>

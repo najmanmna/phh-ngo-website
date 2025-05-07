@@ -17,7 +17,8 @@ export default function About() {
     };
   }, []);
 
-  const newsletterPDF = "/Phh newsletter.pdf";
+  const newsletterPDF =
+    "https://www.dropbox.com/scl/fi/ah88ms4rhoq8ys7ocgggt/Phh-newsletter.pdf?rlkey=4xad3izpbu5lqszq550ksshh4&st=6cb09uyj&dl=0";
 
   return (
     <section
@@ -36,7 +37,7 @@ export default function About() {
             A look into our mission
           </h4>
         </div>
-        <div className="flex-col flex md:flex-row  items-center justify-center md:gap-x-32 md:ml-28">
+        <div className="flex-col flex lg:flex-row  items-center justify-center lg:gap-x-32 lg:ml-28">
           {" "}
           <h2 className="text-3xl text-center  sm:text-6xl font-extrabold text-primary leading-tight">
             About Us
@@ -57,7 +58,7 @@ export default function About() {
         </div>
 
         {/* Newsletter + Video */}
-        <div className="grid  md:grid-cols-2 sm:bg-primary rounded-md gap-10 items-start content-center md:p-10">
+        <div className="grid  lg:grid-cols-2 sm:bg-primary rounded-md gap-10 items-start content-center md:p-10">
           {/* Newsletter Section */}
           <div className="order-2 md:order-1 bg-primary p-8 md:p-12  self-center">
             <div className="flex items-center gap-3 mb-4 text-gray-200">

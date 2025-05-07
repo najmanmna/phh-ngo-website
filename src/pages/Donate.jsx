@@ -26,8 +26,8 @@ function Donate() {
   return (
     <>
       <Navbar variant="donate" />
-      <div className="min-h-screen bg-[#faf6f1] py-10 px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+      <div className="min-h-screen bg-green-50 py-10 px-4">
+        <h2 className="text-3xl font-bold text-center mb-8 text-primary">
           Ways to Donate
         </h2>
 

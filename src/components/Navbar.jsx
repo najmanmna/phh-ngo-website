@@ -23,21 +23,21 @@ const Navbar = ({ variant }) => {
             />
           </Link>
 
-          <div className="text-left leading-5 md:leading-7">
+          <div className="text-left leading-tight md:leading-7">
             <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[22px]">
               Patients Helping Hands
             </h1>
             <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[22px]">
               Welfare Association
             </h3>
-            <p className="text-primary ml-[3px] leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
+            <p className="text-primary ml-[3px] md:leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
               Est. 2011
             </p>
           </div>
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-6 text-lg font-medium text-gray-800">
+        <ul className="hidden lg:flex space-x-6 text-lg font-medium text-gray-800">
           <li>
             <a
               href={isDonatePage ? "/" : "#home"}
@@ -74,20 +74,20 @@ const Navbar = ({ variant }) => {
 
         {/* Donate Button */}
         {!isDonatePage && (
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <DonateButton />
           </div>
         )}
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="md:hidden">
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <button onClick={toggleMenu} className="lg:hidden">
+          {isOpen ? <X className="w-6 h-6 text-primary" /> : <Menu className="w-6 h-6 text-primary" />}
         </button>
       </nav>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-4 text-gray-800 font-medium bg-white shadow-md">
+        <div className="lg:hidden px-4 pb-4 space-y-4 text-gray-800 font-medium bg-white shadow-md">
           <a
             href={isDonatePage ? "/" : "#home"}
             className="block hover:text-secondary"
@@ -111,7 +111,7 @@ const Navbar = ({ variant }) => {
               <Link to="/donate">
                 <a
                   href="#donate"
-                  className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                  className="block w-full mt-2 text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
                 >
                   Donate
                 </a>
