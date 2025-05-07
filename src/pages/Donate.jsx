@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 const donationMethods = [
-  "Bank Detailss",
+  "Bank Details",
   "Donate via Courier",
   "In Hand Donation",
   "Doorstep Collection",
