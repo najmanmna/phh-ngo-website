@@ -80,7 +80,7 @@ export default function ContactSection() {
 
       {/* Footer */}
       <div className="mt-12 border-t border-gray-500 pt-6 text-center text-sm text-gray-300">
-        Copyright © 2025 Patients Helping Hands Welfare Assosiation. All Rights
+        Copyright © 2025 Patients Helping Hands Welfare Association. All Rights
         Reserved.
       </div>
 
