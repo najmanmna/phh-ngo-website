@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import messages from "../data/messages.json";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, MessageSquareText } from "lucide-react";
 
 export default function MessagesCarousel() {
   const [index, setIndex] = useState(0);
@@ -48,7 +48,7 @@ export default function MessagesCarousel() {
                 key={`${msg.name}-${i}`}
                 className="bg-white p-8 rounded-2xl shadow-lg w-[280px] md:w-[480px] md:h-[520px] flex flex-col justify-between"
               >
-                <Quote className="text-green-500 w-8 h-8 mx-auto mb-4" />
+                <MessageSquareText className="text-green-500 w-8 h-8 mx-auto mb-4" />
                 <p className="text-gray-700 italic mb-6">"{msg.message}"</p>
                 <div className="flex flex-col items-center">
                   <img
