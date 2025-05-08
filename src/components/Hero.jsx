@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full h-[60vh] sm:h-[70vh] md:h-[90vh] overflow-hidden"
+      className="relative w-full h-[60vh] sm:h-[70vh] md:h-[70vh] overflow-hidden"
     >
       {/* Background Slideshow */}
       {slidesdata.map((slide, index) => (

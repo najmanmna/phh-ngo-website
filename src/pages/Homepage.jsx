@@ -10,7 +10,7 @@ import Projects from "../components/Projects";
 
 function Homepage() {
   return (
-    <>
+    <div className="pt-20">
       <Navbar />
       <Hero />
       <About />
@@ -20,7 +20,7 @@ function Homepage() {
       <CTA />
       <MessagesCarousel />
       <ContactUs />
-    </>
+    </div>
   );
 }
 

@@ -16,12 +16,12 @@ export default function ProjectDetailsPage() {
   }
 
   return (
-    <>
+    <div className="pt-20">
       <Navbar variant="donate" />
       <div className="py-10 px-6 max-w-5xl mx-auto">
         <ProjectDetails project={project} />
       </div>
       <ContactUs />
-    </>
+    </div>
   );
 }

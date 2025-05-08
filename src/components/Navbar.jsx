@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/PHH_LOGO.jpg";
+import logo from "../assets/PHH_LOGO_NOBG.png";
 import DonateButton from "./DonateButton";
 import { Link, useLocation } from "react-router-dom";
 
@@ -11,23 +11,23 @@ const Navbar = ({ variant }) => {
   const isDonatePage = variant === "donate";
 
   return (
-    <header className="bg-white shadow-md">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:py-0">
+    <header className="backdrop-blur-md bg-white/60 shadow-md fixed top-0 inset-x-0 z-50">
+      <nav className="max-w-7xl mx-auto   flex items-center justify-between px-4 md:py-0">
         {/* Logo & Name */}
         <div className="flex items-center space-x-3">
           <Link to="/">
             <img
               src={logo}
               alt="PHH Logo"
-              className="w-16 h-16 object-contain sm:w-[80px] md:w-[100px] md:h-24"
+              className="w-16 h-16 object-contain sm:w-[80px] md:w-[100px] md:h-20"
             />
           </Link>
 
-          <div className="text-left leading-tight md:leading-7">
-            <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[22px]">
+          <div className="text-left leading-tight">
+            <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[20px]">
               Patients Helping Hands
             </h1>
-            <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[22px]">
+            <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[20px]">
               Welfare Association
             </h3>
             <p className="text-primary ml-[3px] md:leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
@@ -37,7 +37,7 @@ const Navbar = ({ variant }) => {
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex space-x-6 text-lg font-medium text-gray-800">
+        <ul className="hidden lg:flex space-x-6 text-md font-medium text-gray-800">
           <li>
             <a
               href={isDonatePage ? "/" : "#home"}

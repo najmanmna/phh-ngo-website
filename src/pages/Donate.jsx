@@ -24,7 +24,7 @@ function Donate() {
   const [activeMethod, setActiveMethod] = useState("Bank Accounts");
 
   return (
-    <>
+    <div className="mt-20">
       <Navbar variant="donate" />
       <div className="min-h-screen bg-green-50 py-10 px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-primary">
@@ -167,7 +167,7 @@ function Donate() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
