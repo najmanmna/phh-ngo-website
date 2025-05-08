@@ -59,10 +59,9 @@ const Navbar = ({ variant }) => {
                 </a>
               </li>
               <li>
-                {/* <Link to="/team"></Link> */}
-                <a href="/team" className="hover:text-secondary transition">
+                <Link to="/team" className="hover:text-secondary transition">
                   Meet Our Team
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#contact" className="hover:text-secondary transition">
@@ -104,9 +103,10 @@ const Navbar = ({ variant }) => {
               <a href="#projects" className="block">
                 Our Projects
               </a>
-              <a href="/team" className="block ">
+              <Link to="/team" className="block">
                 Meet Our Team
-              </a>
+              </Link>
+
               <a href="#contact" className="block ">
                 Contact
               </a>
