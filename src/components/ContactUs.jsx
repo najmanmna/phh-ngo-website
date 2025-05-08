@@ -15,7 +15,17 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Left Column */}
         <div className="space-y-4">
-          <img src="/phh_logo_b.png" alt="PHH Logo" className="w-40 border border-5 border-lime-200" />
+          <div className="relative w-40 h-40">
+            <div className="absolute inset-0 rounded-full bg-lime-300/20 blur-2xl"></div>
+            <div className="relative z-10 rounded-full bg-white/70 backdrop-blur-md border border-white/20 flex items-center justify-center w-full h-full hover:bg-white/80">
+              <img
+                src="/phh-nobg.png"
+                alt="PHH Logo"
+                className="w-36 h-36 object-contain "
+              />
+            </div>
+          </div>
+
           <p className="text-lg font-medium leading-relaxed">
             Join us in lending a hand so we can make a difference together
           </p>
