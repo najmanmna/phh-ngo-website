@@ -21,7 +21,7 @@ const donationMethods = [
 ];
 
 function Donate() {
-  const [activeMethod, setActiveMethod] = useState("Bank Accounts");
+  const [activeMethod, setActiveMethod] = useState("Bank Details");
 
   return (
     <div className="mt-20">

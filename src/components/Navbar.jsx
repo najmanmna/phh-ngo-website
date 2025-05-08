@@ -59,8 +59,9 @@ const Navbar = ({ variant }) => {
                 </a>
               </li>
               <li>
-                <a href="#team" className="hover:text-secondary transition">
-                  Our Team
+                {/* <Link to="/team"></Link> */}
+                <a href="/team" className="hover:text-secondary transition">
+                  Meet Our Team
                 </a>
               </li>
               <li>
@@ -81,37 +82,38 @@ const Navbar = ({ variant }) => {
 
         {/* Mobile Menu Button */}
         <button onClick={toggleMenu} className="lg:hidden">
-          {isOpen ? <X className="w-6 h-6 text-primary" /> : <Menu className="w-6 h-6 text-primary" />}
+          {isOpen ? (
+            <X className="w-6 h-6 text-primary" />
+          ) : (
+            <Menu className="w-6 h-6 text-primary" />
+          )}
         </button>
       </nav>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden px-4 pb-4 space-y-4 text-gray-800 font-medium bg-white shadow-md">
-          <a
-            href={isDonatePage ? "/" : "#home"}
-            className="block hover:text-secondary"
-          >
+        <div className="lg:hidden fixed  bg-white/90 backdrop-blur-md inset-x-0 z-50 px-4 pb-4 space-y-4 text-gray-800 font-medium shadow-md">
+          <a href={isDonatePage ? "/" : "#home"} className="block ">
             Home
           </a>
           {!isDonatePage && (
             <>
-              <a href="#about" className="block hover:text-secondary">
+              <a href="#about" className="block">
                 About us
               </a>
-              <a href="#projects" className="block hover:text-secondary">
+              <a href="#projects" className="block">
                 Our Projects
               </a>
-              <a href="#team" className="block hover:text-secondary">
-                Our Team
+              <a href="/team" className="block ">
+                Meet Our Team
               </a>
-              <a href="#contact" className="block hover:text-secondary">
+              <a href="#contact" className="block ">
                 Contact
               </a>
               <Link to="/donate">
                 <a
                   href="#donate"
-                  className="block w-full mt-2 text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                  className="block w-full mt-2 text-center bg-primary text-white px-4 py-2 rounded-md "
                 >
                   Donate
                 </a>
