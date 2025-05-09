@@ -9,6 +9,7 @@ const Navbar = ({ variant }) => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const isDonatePage = variant === "donate";
+  const isProjectPage = variant === "project";
 
   return (
     <header className="backdrop-blur-md bg-white/60 shadow-md fixed top-0 inset-x-0 z-50">
@@ -38,15 +39,21 @@ const Navbar = ({ variant }) => {
 
         {/* Desktop Nav */}
         <ul className="hidden lg:flex space-x-6 text-md font-medium text-gray-800">
-          <li>
-            <a
-              href={isDonatePage ? "/" : "#home"}
-              className="hover:text-secondary transition"
-            >
-              Home
-            </a>
-          </li>
-          {!isDonatePage && (
+          {!isProjectPage && (
+            <>
+              {" "}
+              <li>
+                <a
+                  href={isDonatePage ? "/" : "#home"}
+                  className="hover:text-secondary transition"
+                >
+                  Home
+                </a>
+              </li>
+            </>
+          )}
+
+          {!isDonatePage && !isProjectPage && (
             <>
               <li>
                 <a href="#about" className="hover:text-secondary transition">
@@ -92,9 +99,12 @@ const Navbar = ({ variant }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden fixed  bg-white/90 backdrop-blur-md inset-x-0 z-50 px-4 pb-4 space-y-4 text-gray-800 font-medium shadow-md">
-          <a href={isDonatePage ? "/" : "#home"} className="block ">
-            Home
-          </a>
+          {isProjectPage && (
+            <a href={isDonatePage ? "/" : "#home"} className="block ">
+              Home
+            </a>
+          )}
+
           {!isDonatePage && (
             <>
               <a href="#about" className="block">
@@ -110,14 +120,10 @@ const Navbar = ({ variant }) => {
               <a href="#contact" className="block ">
                 Contact
               </a>
-              <Link to="/donate">
-                <a
-                  href="#donate"
-                  className="block w-full mt-2 text-center bg-primary text-white px-4 py-2 rounded-md "
-                >
-                  Donate
-                </a>
-              </Link>
+              <Link
+                to="/donate"
+                className="block w-full mt-2 text-center bg-primary text-white px-4 py-2 rounded-md"
+              >Donate</Link>
             </>
           )}
         </div>

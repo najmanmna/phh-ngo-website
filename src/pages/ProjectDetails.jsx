@@ -20,8 +20,8 @@ export default function ProjectDetailsPage() {
     <div className="pt-20">
       <ScrollToTop />
 
-      <Navbar variant="donate" />
-      <div className="py-10 px-6 max-w-5xl mx-auto">
+      <Navbar variant="project" />
+      <div className="py-10 px-6 max-w-7xl mx-auto">
         <ProjectDetails project={project} />
       </div>
       <ContactUs />

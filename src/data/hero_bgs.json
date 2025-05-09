@@ -7,21 +7,21 @@
     "showButton": true
   },
   {
-    "image": "/hero_bgs/bg2_4.png",
+    "image": "/hero_bgs/bg2_new.png",
     "heading": "",
     "subtext": "",
     "showSubtext": false,
     "showButton": false
   },
   {
-    "image": "/hero_bgs/bg3.png",
+    "image": "/hero_bgs/bg3_new.png",
     "heading": "Celebrating 14 years of PHHWA ",
     "subtext": "",
     "showSubtext": false,
     "showButton": false
   },
   {
-    "image": "/hero_bgs/bg4.png",
+    "image": "/hero_bgs/bg4_new.png",
     "heading": "Together, We share hope and smiles",
     "subtext": "",
     "showSubtext": false,

@@ -4,8 +4,9 @@
     "type": "ongoing",
     "title": "Medical Ward 7 Drug Bank & HDU",
     "description": "The Patients Helping Hands (PHH) Welfare Association initiated the High Dependency Unit (HDU) project in Medical Ward-7 at JPMC in June 2014. Recognizing the urgent need for critical care facilities within general medical wards, PHH took the lead in establishing a specialized six-bed HDU equipped with modern, state-of-the-art medical infrastructure. This initiative significantly reduced the burden on the already overwhelmed ICU services at JPMC, eliminating the need for critically ill patients in Ward-7 to wait in long queues for ICU admission. \n\nOver the years, this HDU has transformed into a vital component of Medical Ward-7, providing high-quality care to patients in serious but stable conditions who require close monitoring and support. The unit is designed to function independently, with all essential medical equipment, including multiparameter monitors, infusion pumps, suction machines, oxygen supply systems, and emergency care tools, readily available at each bedside.\n\n PHH not only initiated but continues to actively maintain and manage the HDU. Our team ensures that the equipment remains in optimal working condition, the supplies are regularly replenished, and the environment meets the highest standards of hygiene and functionality. To strengthen the clinical efficiency of the unit, PHH has appointed a trained ICU operator who is present full-time to oversee patient care, manage equipment, and coordinate with the ward's medical staff.\n In addition to operating the HDU, PHH extends its support to the broader patient population of Ward 7 by providing essential medicines free of cost. These medications are distributed daily to inpatients, especially those who cannot afford treatment, through a system funded entirely by zakat and charitable donations. This ensures that financial hardship never becomes a barrier to receiving timely and appropriate medical care.\n\n Through our sustained efforts in the HDU and beyond, PHH remains committed to its mission of serving humanity, supporting public healthcare infrastructure, and standing beside those in need during their most vulnerable moments",
-    "image": "/project_cover_images/project1.jpg",
-    "link": "/projects/medical-ward-7",
+    "image": "/project_cover_images/m7_drugbank_1.png",
+    "link": "/projects/m7-drugbank",
+    "detailedimage":"/project_cover_images/detailed/m7_ward_page.png",
     "impactStats": [
       {
         "icon": "/impact_icons/1.png",
@@ -29,8 +30,9 @@
     "type": "ongoing",
     "title": "Gynae ward 9A Drug Bank",
     "description": "The Gynae 9A Drug Bank at JPMC was established to ensure that essential medications and supplies are accessible to expectant and new mothers who cannot afford them. One of the key services offered through this drug bank is the provision of anti-D immunoglobulin — a life-saving injection that is often financially out of reach for many families. Alongside this, other essential medications and maternal health supplies are also distributed free of cost to support safe deliveries and postnatal care. This initiative reflects PHH’s commitment to reducing maternal and neonatal health risks by bridging treatment gaps in high-need public healthcare settings.\n\n In addition to supporting Ward 9A, the drug bank also supplies necessary medications and materials to its sister ward, Gynae 9B. PHH has developed a strong working relationship and communication network with the doctors and healthcare staff across both wards. Through regular coordination, these professionals inform us about the medications and supplies most urgently needed by patients. This system allows us to respond swiftly and efficiently, ensuring that no mother is left untreated due to a lack of resources. By maintaining this proactive and collaborative approach, PHH continues to play a vital role in supporting maternal health at JPMC.",
-    "image": "/project_cover_images/project2.jpg",
+    "image": "/project_cover_images/gynae_ward_9a.jpg",
     "link": "/projects/Gynae-ward-9A-Drug-Bank",
+    "detailedimage":"/project_cover_images/detailed/gynae_ward_page.png",
     "impactStats": [
       {
         "icon": "/impact_icons/1.png",
@@ -54,8 +56,9 @@
     "type": "ongoing",
     "title": "NICH Drug Bank",
     "description": "On October 4th, 2011, Patients’ Helping Hands (PHH) launched its very first initiative, the NICH Drug Bank. Since its inception, the project has provided life-saving medications and medical disposables free of cost to thousands of pediatric patients. The aim has always been to ensure that essential treatments remain accessible to those who need them most. In response to a recent survey highlighting shortages of critical medications, the project is now focused on maintaining a steady supply of vital healthcare essentials. This effort plays a key role in improving treatment outcomes and ensuring that children receive the care they deserve without unnecessary delays.\n\nOperations at the NICH Drug Bank were temporarily halted during the COVID-19 pandemic due to safety concerns and logistical challenges. However, in 2024, PHH proudly resumed full operations at the drug bank, revitalizing its mission with renewed commitment and energy. Today, the project is running in full flow, with an organized system of medicine procurement and distribution. Our volunteers and team members are actively engaged on the ground, working closely with NICH staff to identify needs, respond to emergencies, and deliver timely support to young patients. This revival marks a reaffirmation of PHH’s dedication to pediatric care and its foundational promise of serving those in need.",
-    "image": "/project_cover_images/project3.jpg",
-    "link": "/projects/NICH-Drug-Bank",
+    "image": "/project_cover_images/NICH_drugbank_2.png.jpg",
+    "link": "/projects/NICH_drugbank",
+    "detailedimage":"/project_cover_images/detailed/nich_page.png",
     "impactStats": [
       {
         "icon": "/impact_icons/1.png",
@@ -79,7 +82,8 @@
     "type": "ongoing",
     "title": "Fund a Patient",
     "description": "The 'Fund a Patient' campaign is one of PHH’s most compassionate and targeted initiatives, operating in the Oncology Ward of JPMC. This project aims to identify cancer patients who are in the most urgent need of financial assistance and match them with generous donors willing to support their treatment through zakat and donations. Many of these patients face not only the emotional and physical toll of a cancer diagnosis but also the overwhelming burden of medical expenses they cannot afford.\n\nTo ensure that every case supported is genuine and deserving, PHH collaborates closely with the Yasmeen Foundation, which helps us verify the financial and medical details of each patient. This partnership strengthens our ability to direct zakat funds responsibly and ethically, following Islamic principles.\n\nOnce a patient is selected for the campaign, our dedicated volunteers stay in close contact with them and their families. They gather and update every detail of the case—diagnosis, treatment plan, cost estimates, and progress reports—so donors can make informed decisions and remain connected with the patient’s journey. This level of transparency fosters trust and accountability, making each donation not just a financial contribution but a deeply human connection between giver and receiver.\n\n Through this initiative, PHH continues to stand by some of the most vulnerable individuals in our healthcare system, ensuring they are not alone in their fight against cancer. The 'Fund a Patient' campaign embodies the true spirit of service, where compassion, trust, and community come together to save lives.",
-    "image": "/project_cover_images/BG_image.png",
-    "link": "/projects/Fund-a-Patient"
+    "image": "/project_cover_images/fund_a_patient.jpg",
+    "link": "/projects/Fund-a-Patient",
+    "detailedimage":"/project_cover_images/detailed/fund_a_patient_page.jpg"
   }
 ]

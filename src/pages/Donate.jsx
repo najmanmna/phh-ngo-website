@@ -17,7 +17,7 @@ const donationMethods = [
   "Donate via Courier",
   "In Hand Donation",
   "Doorstep Collection",
-  "Donate via EasyPaisa",
+  // "Donate via EasyPaisa",
 ];
 
 function Donate() {
