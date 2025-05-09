@@ -5,7 +5,7 @@ export default function Preloader() {
     <div className="flex flex-col items-center justify-center h-screen w-screen bg-white">
       {/* Logo with fade-in and scale */}
       <img
-        src="/phh_logo_nobg.png"
+        src="/PHH_LOGO_NOBG.png"
         alt="PHH Logo"
         className="w-56  animate-[fadeInScale_1.2s_ease-in-out_forwards]"
       />

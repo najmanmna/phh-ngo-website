@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/PHH_LOGO_NOBG.png";
+import logo from "/PHH_LOGO_NOBG.png";
 import DonateButton from "./DonateButton";
 import { Link, useLocation } from "react-router-dom";
 
