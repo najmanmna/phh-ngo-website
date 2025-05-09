@@ -29,7 +29,10 @@ export default function MessagesCarousel() {
   }, [total]);
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50" style={{
+      backgroundColor: "#ffffff",
+      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23224d2f' fill-opacity='0.26' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")`,
+    }}>
       <div className="flex items-center justify-left space-x-4 ml-3 mb-4 md:ml-24">
         <span className="w-10 h-[2px] bg-gray-600"></span>
         <h4 className="uppercase text-xs tracking-widest text-gray-600">

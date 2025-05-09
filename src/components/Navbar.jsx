@@ -99,13 +99,10 @@ const Navbar = ({ variant }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden fixed  bg-white/90 backdrop-blur-md inset-x-0 z-50 px-4 pb-4 space-y-4 text-gray-800 font-medium shadow-md">
-          {isProjectPage && (
-            <a href={isDonatePage ? "/" : "#home"} className="block ">
-              Home
-            </a>
-          )}
-
-          {!isDonatePage && (
+          <a href={isDonatePage ||isProjectPage ? "/" : "#home"} className="block ">
+            Home
+          </a>
+          {!isDonatePage && !isProjectPage && (
             <>
               <a href="#about" className="block">
                 About us
@@ -123,7 +120,9 @@ const Navbar = ({ variant }) => {
               <Link
                 to="/donate"
                 className="block w-full mt-2 text-center bg-primary text-white px-4 py-2 rounded-md"
-              >Donate</Link>
+              >
+                Donate
+              </Link>
             </>
           )}
         </div>

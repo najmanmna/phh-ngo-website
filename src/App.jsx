@@ -19,7 +19,13 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-white">
+    <div
+      className="relative min-h-screen bg-white"
+      style={{
+        backgroundColor: "#ffffff",
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23224d2f' fill-opacity='0.26' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")`,
+      }}
+    >
       {/* Preloader overlay */}
       {isLoading && (
         <div className="fixed inset-0 z-[9999] bg-white flex items-center justify-center transition-opacity duration-700">
@@ -27,13 +33,19 @@ function App() {
         </div>
       )}
 
-      {/* Website content, behind preloader */}
-      <div className={`${isLoading ? "opacity-0" : "opacity-100"} transition-opacity duration-700`}>
+      <div
+        className={`${
+          isLoading ? "opacity-0" : "opacity-100"
+        } transition-opacity duration-700`}
+      >
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/donate" element={<Donate />} />
-            <Route path="/projects/:projectId" element={<ProjectDetailsPage />} />
+            <Route
+              path="/projects/:projectId"
+              element={<ProjectDetailsPage />}
+            />
             <Route path="/team" element={<MeetTheTeam />} />
           </Routes>
         </Router>

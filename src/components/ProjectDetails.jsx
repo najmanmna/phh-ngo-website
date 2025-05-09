@@ -10,14 +10,14 @@ export default function ProjectDetails({ project }) {
       <h1 className="text-3xl text-primary text-center font-bold mb-10  ">
         {project.title}
       </h1>
-      <div className="flex gap-8 ">
+      <div className="flex gap-8 flex-col md:flex-row">
         {" "}
         <img
           src={project.detailedimage}
           alt={project.title}
-          className="mx-auto h-full  w-1/2"
+          className="mx-auto h-full w-3/4 md:w-1/2"
         />
-        <div className="right-container flex flex-col w-1/2">
+        <div className="right-container flex flex-col self-center w-3/4 md:w-1/2">
           {/* Dynamic impact stats */}
           {project.impactStats && (
             <div className="bg-green-50 rounded-xl shadow-md p-6  text-center mb-5 ">
