@@ -14,5 +14,14 @@ export default {
       scrollBehavior: ["responsive"],
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".backface-hidden": {
+          "backface-visibility": "hidden",
+        },
+      });
+    },
+  ],
 };

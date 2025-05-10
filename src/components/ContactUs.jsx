@@ -3,13 +3,26 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
+import { useState } from "react";
 
 export default function ContactSection() {
+  const [activeMap, setActiveMap] = useState("location1");
+
+  const maps = {
+    location1: {
+      name: "Office Location",
+      src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.8990151128774!2d67.0811475!3d24.867298400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ea56e5fcd31%3A0x32188ffb6c513091!2sSky%20Mark%20Tower%D8%8C%20KCHSU%20Ltd%D8%8C%20Plot%20A%2F13%20Shahra-e-Faisal%2C%20Jinnah%20Housing%20Society%20P.E.C.H.S.%2C%20Karachi%2C%2075350!5e0!3m2!1sen!2s!4v1746890981260!5m2!1sen!2s",
+    },
+    location2: {
+      name: "University Location",
+      src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3706177423155!2d67.0451054!3d24.851188499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33dd546e80561%3A0x9fac68702d86bd41!2sJinnah%20Sindh%20Medical%20University!5e0!3m2!1sen!2s!4v1746890811787!5m2!1sen!2s",
+    },
+  };
+
   return (
     <section id="contact" className="bg-[#0f3d2e] text-white px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
@@ -21,7 +34,7 @@ export default function ContactSection() {
               <img
                 src="/phh-nobg.png"
                 alt="PHH Logo"
-                className="w-36 h-36 object-contain "
+                className="w-36 h-36 object-contain"
               />
             </div>
           </div>
@@ -38,7 +51,7 @@ export default function ContactSection() {
               <FaLinkedin />
             </a>
             <a
-              href="https://www.facebook.com/patients.helping.hands/ "
+              href="https://www.facebook.com/patients.helping.hands/"
               className="bg-white text-darkblue p-2 rounded-full hover:scale-110 transition"
             >
               <FaFacebookF />
@@ -73,15 +86,32 @@ export default function ContactSection() {
           </div>
           <div className="flex items-start space-x-3">
             <FaPhoneAlt className="mt-1 text-secondary" />
-            <p>03322943245 / 03272042428 </p>
+            <p>03322943245 / 03272042428</p>
           </div>
         </div>
 
-        {/* Right Column - Map */}
+        {/* Right Column - Tabbed Map */}
         <div>
+          <div className="flex space-x-2 mb-4">
+            {Object.entries(maps).map(([key, { name }]) => (
+              <button
+                key={key}
+                onClick={() => setActiveMap(key)}
+                className={`px-3 py-1 rounded text-sm ${
+                  activeMap === key
+                    ? "bg-secondary text-gray-100"
+                    : "bg-white text-primary hover:bg-gray-300"
+                }`}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+
           <iframe
+            title={maps[activeMap].name}
+            src={maps[activeMap].src}
             className="w-full h-64 rounded-md shadow-md"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.993412162885!2d67.00838937533127!3d24.831849777944123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33eecedbd5483%3A0x209dfd46a85dcd58!2sPatients&#39;%20Welfare%20Association!5e0!3m2!1sen!2s!4v1682753319357!5m2!1sen!2s"
             allowFullScreen=""
             loading="lazy"
           ></iframe>

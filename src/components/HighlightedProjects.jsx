@@ -9,7 +9,7 @@ export default function ProjectHighlights() {
   useEffect(() => {
     const track = trackRef.current;
 
-    // Duplicate the cards for seamless looping
+    // Duplicate cards for infinite scrolling
     const cards = track.querySelectorAll(".highlight-card");
     cards.forEach((card) => {
       const clone = card.cloneNode(true);
@@ -20,7 +20,7 @@ export default function ProjectHighlights() {
     tl.current = gsap.to(track, {
       xPercent: -50,
       ease: "none",
-      duration: 70,
+      duration: 120,
       repeat: -1,
     });
 
@@ -38,7 +38,7 @@ export default function ProjectHighlights() {
   return (
     <section className="relative w-full py-14 bg-green-900 overflow-hidden">
       <h2 className="text-center text-white text-3xl font-semibold mb-8">
-        One time Projects
+        One-time Projects
       </h2>
 
       <div className="relative w-full overflow-hidden">
@@ -46,18 +46,32 @@ export default function ProjectHighlights() {
           {highlightedProjects.map((proj, i) => (
             <div
               key={i}
-              className="highlight-card w-[260px] h-[250px] bg-white rounded-xl shadow-md overflow-hidden flex-shrink-0 transition-transform duration-300 hover:scale-105 cursor-pointer"
+              className="highlight-card group w-[260px] h-[250px] [perspective:1000px] flex-shrink-0 cursor-pointer"
             >
-              <img
-                src={proj.image}
-                alt={proj.title}
-                className="h-[120px] w-full object-cover"
-              />
-              <div className="p-3">
-                <h3 className="text-primary text-md font-bold">{proj.title}</h3>
-                <p className="text-gray-700 text-sm mt-1 line-clamp-3">
-                  {proj.description}
-                </p>
+              <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front Side */}
+                <div className="absolute inset-0 bg-white rounded-xl shadow-md overflow-hidden backface-hidden">
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute bottom-0 w-full bg-primary/70 text-center  font-semibold py-2 px-3">
+                    <h3 className="text-white text-md font-bold text-center">
+                      {proj.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Back Side */}
+                <div className="absolute content-center inset-0 bg-white rounded-xl shadow-md overflow-hidden backface-hidden [transform:rotateY(180deg)] p-4">
+                  <h4 className="text-primary text-md font-bold text-center mb-4">
+                    {proj.title}
+                  </h4>
+                  <p className="text-gray-700 text-sm line-clamp-6">
+                    {proj.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
