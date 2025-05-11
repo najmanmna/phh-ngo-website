@@ -111,7 +111,13 @@ const Navbar = ({ variant }) => {
         )}
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="lg:hidden">
+        <button
+          onClick={(e) => {
+            e.stopPropagation(); // 👈 prevent outside handler
+            toggleMenu();
+          }}
+          className="lg:hidden"
+        >
           {isOpen ? (
             <X className="w-6 h-6 text-primary" />
           ) : (
