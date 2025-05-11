@@ -6,18 +6,18 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = ({ variant }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   const isDonatePage = variant === "donate";
   const isProjectPage = variant === "project";
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isOpen) setIsOpen(false);
+      setIsOpen(false);
     };
 
-    const handleClickOutside = (e) => {
-      if (isOpen && menuRef.current && !menuRef.current.contains(e.target)) {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
@@ -25,13 +25,11 @@ const Navbar = ({ variant }) => {
     if (isOpen) {
       window.addEventListener("scroll", handleScroll);
       document.addEventListener("mousedown", handleClickOutside);
-      document.addEventListener("touchstart", handleClickOutside);
     }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [isOpen]);
 
