@@ -83,6 +83,7 @@ export default function ProjectHighlights() {
                     src={proj.image}
                     alt={proj.title}
                     className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute bottom-0 w-full bg-primary/70 text-center font-semibold py-2 px-3">
                     <h3 className="text-white text-md font-bold text-center">
