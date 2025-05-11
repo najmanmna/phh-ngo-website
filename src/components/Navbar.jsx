@@ -18,7 +18,7 @@ const Navbar = ({ variant }) => {
         <div className="flex items-center space-x-3">
           <Link to="/">
             <img
-              src="/PHH_LOGO_NOBG.png"
+              src="/PHH_LOGO_NOBG.webp"
               alt="PHH Logo"
               className="w-16 h-16 object-contain sm:w-[80px] md:w-[100px] md:h-20"
             />

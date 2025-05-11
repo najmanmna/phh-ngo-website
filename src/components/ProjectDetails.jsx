@@ -16,6 +16,7 @@ export default function ProjectDetails({ project }) {
           src={project.detailedimage}
           alt={project.title}
           className="mx-auto h-full w-3/4 md:w-1/2"
+          loading="lazy"
         />
         <div className="right-container flex flex-col self-center w-3/4 md:w-1/2">
           {/* Dynamic impact stats */}

@@ -33,7 +33,7 @@ export default function ContactSection() {
             <div className="absolute inset-0 rounded-full bg-lime-300/20 blur-2xl"></div>
             <div className="relative z-10 rounded-full bg-white/70 backdrop-blur-md border border-white/20 flex items-center justify-center w-full h-full hover:bg-white/80">
               <img
-                src="/phh-nobg.png"
+                src="/PHH_LOGO_NOBG.webp"
                 alt="PHH Logo"
                 className="w-36 h-36 object-contain"
               />
