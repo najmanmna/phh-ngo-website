@@ -104,16 +104,18 @@ function Donate() {
                   <FaPhoneAlt className="mt-1 text-secondary" />
                   <p>03322943245 / 03272042428</p>
                 </div>
-                <div className="pt-4 space-x-3 flex flex-wrap">
+                <div className="gap-y-4 sm:space-x-3 flex flex-wrap">
                   <a
-                    href=""
-                    className="px-6 py-3 rounded-full bg-gray-300 text-darkblue border border-green-500 hover:bg-white"
+                    href="https://maps.app.goo.gl/g3XLg98fzVkBwqS8A"
+                    className="px-6 py-3 rounded-full bg-green-600 text-white border border-green-500 hover:bg-green-400 hover:text-darkblue"
+                    target="_blank"
                   >
                     View Office Location
                   </a>
                   <a
-                    href=""
-                    className="px-6 py-3 rounded-full bg-darkblue text-white border border-green-500 hover:bg-blue-800"
+                    href="https://maps.app.goo.gl/wc9R2WggKP8urj1X8?g_st=com.google.maps.preview.copy"
+                    className="px-6 py-3 rounded-full bg-green-800 text-white border border-green-500 hover:bg-green-700 hover:text-white"
+                    target="_blank"
                   >
                     View University Location
                   </a>

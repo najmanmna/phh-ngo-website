@@ -1,5 +1,5 @@
 import React from "react";
-import CTA_bg from "/cta_bg_1.png";
+import CTA_bg from "/cta_bg_1.webp";
 import DonateButton from "./DonateButton";
 import { Handshake } from "lucide-react";
 

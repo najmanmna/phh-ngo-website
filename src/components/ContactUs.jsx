@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaYoutube,
   FaLinkedin,
+  FaAngleDoubleUp,
 } from "react-icons/fa";
 import { useState } from "react";
 
@@ -99,7 +100,7 @@ export default function ContactSection() {
                 onClick={() => setActiveMap(key)}
                 className={`px-3 py-1 rounded text-sm ${
                   activeMap === key
-                    ? "bg-secondary text-gray-100"
+                    ? "bg-green-600 text-gray-100"
                     : "bg-white text-primary hover:bg-gray-300"
                 }`}
               >
@@ -126,11 +127,11 @@ export default function ContactSection() {
 
       {/* Back to Top Button */}
       <button
-        className="fixed bottom-6 right-6 bg-green-200 text-darkblue p-3 rounded-full shadow-lg hover:bg-green-600 transition"
+        className="fixed bottom-6 right-6 bg-green-600 text-white hover:text-green-900  p-3 rounded-full shadow-lg hover:bg-green-400 transition"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Back to top"
       >
-        ↑
+        <FaAngleDoubleUp className=" font-bold text-lg " />
       </button>
     </section>
   );

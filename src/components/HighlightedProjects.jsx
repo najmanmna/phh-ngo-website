@@ -1,9 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import highlightedProjects from "../data/highlightedProjects.json";
 import { gsap } from "gsap";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ProjectHighlights() {
   const trackRef = useRef(null);
+  const containerRef = useRef(null);
   const tl = useRef(null);
 
   useEffect(() => {
@@ -35,13 +37,39 @@ export default function ProjectHighlights() {
     };
   }, []);
 
+  // Manual scroll handlers
+  const scrollLeft = () => {
+    containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  };
+
   return (
     <section className="relative w-full py-14 bg-green-900 overflow-hidden">
       <h2 className="text-center text-white text-3xl font-semibold mb-8">
         One-time Projects
       </h2>
 
-      <div className="relative w-full overflow-hidden">
+      {/* Arrows */}
+      <button
+        onClick={scrollLeft}
+        className="absolute top-1/2 left-4 z-10 transform -translate-y-1/2 bg-white text-green-700 p-2 rounded-full shadow hover:bg-gray-200 transition"
+      >
+        <ChevronLeft />
+      </button>
+      <button
+        onClick={scrollRight}
+        className="absolute top-1/2 right-4 z-10 transform -translate-y-1/2 bg-white text-green-700 p-2 rounded-full shadow hover:bg-gray-200 transition"
+      >
+        <ChevronRight />
+      </button>
+
+      <div
+        ref={containerRef}
+        className="relative w-full overflow-x-scroll scrollbar-hide"
+      >
         <div ref={trackRef} className="flex gap-6 px-6 w-max">
           {highlightedProjects.map((proj, i) => (
             <div
@@ -56,7 +84,7 @@ export default function ProjectHighlights() {
                     alt={proj.title}
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute bottom-0 w-full bg-primary/70 text-center  font-semibold py-2 px-3">
+                  <div className="absolute bottom-0 w-full bg-primary/70 text-center font-semibold py-2 px-3">
                     <h3 className="text-white text-md font-bold text-center">
                       {proj.title}
                     </h3>

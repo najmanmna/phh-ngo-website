@@ -1,6 +1,7 @@
 import React from "react";
 import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export default function Projects() {
   const ongoingProjects = projectsData
@@ -44,15 +45,11 @@ export default function Projects() {
                   {project.title}
                 </h3>
                 {project.link && (
-                  <Link to={`/projects/${project.id}`}>
-                    <a
-                      href={project.link}
-                      className="text-sm text-green-600 hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Learn more →
-                    </a>
+                  <Link
+                    to={`/projects/${project.id}`}
+                    className="text-sm text-green-600 hover:underline inline-flex items-center gap-1"
+                  >
+                    Learn more <FaArrowUpRightFromSquare />
                   </Link>
                 )}
               </div>

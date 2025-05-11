@@ -1,27 +1,27 @@
 [
   {
-    "image": "/hero_bgs/bg1.jpg",
+    "image": "/hero_bgs/bg1.webp",
     "heading": "Lend a Hand to Make a Difference",
     "subtext": "Patients Helping Hands Welfare Association – A student-operated non-profit NGO working for welfare of patients at JPMC, NICH and NICVD, Karachi, Pakistan",
     "showSubtext": true,
     "showButton": true
   },
   {
-    "image": "/hero_bgs/bg_2_x.png",
+    "image": "/hero_bgs/bg_2_x.webp",
     "heading": "",
     "subtext": "",
     "showSubtext": false,
     "showButton": false
   },
   {
-    "image": "/hero_bgs/bg3_new.png",
+    "image": "/hero_bgs/bg3_new.webp",
     "heading": "Celebrating 14 years of PHHWA ",
     "subtext": "",
     "showSubtext": false,
     "showButton": false
   },
   {
-    "image": "/hero_bgs/bg4_new.png",
+    "image": "/hero_bgs/bg4_new.webp",
     "heading": "Together, We share hope and smiles",
     "subtext": "",
     "showSubtext": false,
