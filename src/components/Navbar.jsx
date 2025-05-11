@@ -57,7 +57,7 @@ const Navbar = ({ variant }) => {
             <>
               <li>
                 <a href="#about" className="hover:text-secondary transition">
-                  About us
+                  About Us
                 </a>
               </li>
               <li>
@@ -108,7 +108,7 @@ const Navbar = ({ variant }) => {
           {!isDonatePage && !isProjectPage && (
             <>
               <a href="#about" className="block">
-                About us
+                About Us
               </a>
               <a href="#projects" className="block">
                 Our Projects
