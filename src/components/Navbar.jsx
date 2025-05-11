@@ -1,29 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
-
 import DonateButton from "./DonateButton";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ variant }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
+  const menuRef = useRef();
 
   const isDonatePage = variant === "donate";
   const isProjectPage = variant === "project";
 
   useEffect(() => {
-    const handleScrollOrTouch = () => {
+    const handleScroll = () => {
       if (isOpen) setIsOpen(false);
     };
 
+    const handleClickOutside = (e) => {
+      if (isOpen && menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
     if (isOpen) {
-      window.addEventListener("scroll", handleScrollOrTouch);
-      window.addEventListener("touchstart", handleScrollOrTouch);
+      window.addEventListener("scroll", handleScroll);
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
     }
 
     return () => {
-      window.removeEventListener("scroll", handleScrollOrTouch);
-      window.removeEventListener("touchstart", handleScrollOrTouch);
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [isOpen]);
 
@@ -114,7 +122,10 @@ const Navbar = ({ variant }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden fixed  bg-white/90 backdrop-blur-md inset-x-0 z-50 px-4 pb-4 space-y-4 text-gray-800 font-medium shadow-md">
+        <div
+          ref={menuRef}
+          className="lg:hidden fixed  bg-white/90 backdrop-blur-md inset-x-0 z-50 px-4 pb-4 space-y-4 text-gray-800 font-medium shadow-md"
+        >
           <a
             href={isDonatePage || isProjectPage ? "/" : "#home"}
             className="block "
