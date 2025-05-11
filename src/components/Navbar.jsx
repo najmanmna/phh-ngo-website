@@ -31,7 +31,7 @@ const Navbar = ({ variant }) => {
             <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[20px]">
               Welfare Association
             </h3>
-            <p className="text-primary ml-[3px] md:leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
+            <p className="text-primary ml-[1px] md:leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
               Est. 2011
             </p>
           </div>
