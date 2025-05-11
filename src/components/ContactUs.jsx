@@ -122,8 +122,27 @@ export default function ContactSection() {
 
       {/* Footer */}
       <div className="mt-12 border-t border-gray-500 pt-6 text-center text-sm text-gray-300">
-        Copyright © 2025 Patients Helping Hands Welfare Association. All Rights
-        Reserved.
+        <p>
+          © 2025 Patients Helping Hands Welfare Association. All Rights
+          Reserved.
+        </p>
+        <p className="mt-1">
+          Designed and Developed by{" "}
+          <a
+            href="https://www.ahamednajman.me"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-white hover:underline"
+            onClick={(e) => {
+              const win = window.open("https://www.ahamednajman.me", "_blank");
+              if (!win || win.closed || typeof win.closed === "undefined") {
+                window.location.href = "mailto:najmanmna@gmail.com";
+              }
+            }}
+          >
+            Ahamed Najman
+          </a>
+        </p>
       </div>
 
       {/* Back to Top Button */}
