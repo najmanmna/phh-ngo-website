@@ -13,7 +13,7 @@ function App() {
     // Preloader timeout (or you could use animationend listener)
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 7000); // or however long your animation takes
+    }, 5000); // or however long your animation takes
 
     return () => clearTimeout(timer);
   }, []);
