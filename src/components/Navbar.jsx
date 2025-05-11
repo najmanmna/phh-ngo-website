@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 import DonateButton from "./DonateButton";
@@ -10,6 +10,22 @@ const Navbar = ({ variant }) => {
 
   const isDonatePage = variant === "donate";
   const isProjectPage = variant === "project";
+
+  useEffect(() => {
+    const handleScrollOrTouch = () => {
+      if (isOpen) setIsOpen(false);
+    };
+
+    if (isOpen) {
+      window.addEventListener("scroll", handleScrollOrTouch);
+      window.addEventListener("touchstart", handleScrollOrTouch);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollOrTouch);
+      window.removeEventListener("touchstart", handleScrollOrTouch);
+    };
+  }, [isOpen]);
 
   return (
     <header className="backdrop-blur-md bg-white/60 shadow-md fixed top-0 inset-x-0 z-50">
