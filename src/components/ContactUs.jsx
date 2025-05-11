@@ -36,6 +36,7 @@ export default function ContactSection() {
                 src="/PHH_LOGO_NOBG.webp"
                 alt="PHH Logo"
                 className="w-36 h-36 object-contain"
+                loading="lazy"
               />
             </div>
           </div>
