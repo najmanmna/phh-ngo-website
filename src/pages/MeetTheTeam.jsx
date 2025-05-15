@@ -56,7 +56,14 @@ const MeetTheTeam = () => {
           {/* <p className="text-sm text-lime-300 mb-8">
             Dedicated minds working to serve the cause
           </p> */}
-
+          <div className="mb-10">
+            <h2 className="text-xl md:text-2xl font-semibold text-white mb-4 bg-primary">
+              Founder and Chairman
+            </h2>
+            <h3 className="text-lg font-medium text-primary">
+              Dr Syed Osama Zohaib Ullah
+            </h3>
+          </div>
           <div className="mb-10">
             <h2 className="text-xl md:text-2xl font-semibold text-white mb-4 bg-primary">
               Office Bearers
