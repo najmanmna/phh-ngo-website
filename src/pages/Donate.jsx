@@ -11,6 +11,7 @@ import {
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
+import ScrollToTop from "../components/Scrolltotop";
 
 const donationMethods = [
   "Bank Details",
@@ -24,14 +25,15 @@ function Donate() {
   const [activeMethod, setActiveMethod] = useState("Bank Details");
 
   return (
-    <div className="mt-20">
+    <div className="pt-16 sm:pt-20">
+      <ScrollToTop />
       <Navbar variant="donate" />
       <div className="min-h-screen bg-green-50 py-10 px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-primary">
           Ways to Donate
         </h2>
 
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6">
+        <div className="max-w-5xl md:h-60 mx-auto flex flex-col md:flex-row gap-6">
           {/* Sidebar */}
           <div className="flex md:flex-col gap-3 w-full md:w-1/4 flex-wrap md:flex-nowrap justify-center">
             {donationMethods.map((method) => (
@@ -107,14 +109,14 @@ function Donate() {
                 <div className="gap-y-4 sm:space-x-3 flex flex-wrap">
                   <a
                     href="https://maps.app.goo.gl/g3XLg98fzVkBwqS8A"
-                    className="px-6 py-3 rounded-full bg-green-600 text-white border border-green-500 hover:bg-green-400 hover:text-darkblue"
+                    className="px-4 py-2 rounded-full bg-green-600 text-white border border-green-500 hover:bg-green-400 hover:text-darkblue"
                     target="_blank"
                   >
                     View Office Location
                   </a>
                   <a
                     href="https://maps.app.goo.gl/wc9R2WggKP8urj1X8?g_st=com.google.maps.preview.copy"
-                    className="px-6 py-3 rounded-full bg-green-800 text-white border border-green-500 hover:bg-green-700 hover:text-white"
+                    className="px-4 py-2 rounded-full bg-green-800 text-white border border-green-500 hover:bg-green-700 hover:text-white"
                     target="_blank"
                   >
                     View University Location
@@ -167,6 +169,30 @@ function Donate() {
               </div>
             )}
           </div>
+        </div>
+        {/* Shariah Compliance Certificate Section */}
+        <div className="mt-10  p-6 rounded-xl shadow-md max-w-5xl mx-auto text-darkblue">
+          <p className="text-sm md:text-base mb-4">
+            Patients Helping Hands Welfare Association, under the guidance of{" "}
+            <span className="font-semibold">Mufti Muhammad Moosa Khan</span>{" "}
+            from{" "}
+            <span className="font-semibold">
+              Jamia Bait ul ilm, Defence View Karachi
+            </span>
+            , confirms that PHH is collecting and spending Zakat funds in
+            accordance with the principles of Islam as defined by the
+            instructions of Shariah. It is also confirmed that whosoever donates
+            Zakat to Patients Helping Hands, their Zakat will be utilized
+            appropriately as per the Shariah point of view.
+          </p>
+          <a
+            href="/shariah_certificate.jpg" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2 mt-2 rounded-full bg-primary text-white hover:bg-green-700 transition"
+          >
+            View Shariah Certificate
+          </a>
         </div>
       </div>
     </div>

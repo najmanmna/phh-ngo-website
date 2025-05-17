@@ -45,18 +45,19 @@ const Navbar = ({ variant }) => {
               className="w-16 h-16 object-contain sm:w-[80px] md:w-[100px] md:h-20"
             />
           </Link>
-
-          <div className="text-left leading-tight">
-            <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[20px]">
-              Patients Helping Hands
-            </h1>
-            <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[20px]">
-              Welfare Association
-            </h3>
-            <p className="text-primary ml-[1px] md:leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
-              Est. 2011
-            </p>
-          </div>
+          <Link to="/">
+            <div className="text-left leading-tight">
+              <h1 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[20px]">
+                Patients Helping Hands
+              </h1>
+              <h3 className="text-primary font-extrabold text-[14px] sm:text-[18px] md:text-[20px]">
+                Welfare Association
+              </h3>
+              <p className="text-primary ml-[1px] md:leading-[17px] font-extrabold text-[10px] sm:text-[12px] md:text-[12px]">
+                Est. 2011
+              </p>
+            </div>
+          </Link>
         </div>
 
         {/* Desktop Nav */}
