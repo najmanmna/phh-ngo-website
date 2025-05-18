@@ -83,36 +83,36 @@ const MeetTheTeam = () => {
   const foundingMembers = [
     {
       name: "Dr. Syed Osama Zohaib Ullah",
-      info: "Chairman, Board of Governors | Founding Member | SMC Class of 2012",
+      info: "Chairman, Board of Governors | SMC Class of 2012",
     },
-    { name: "Dr. Mustafa Tai", info: "Founding Member | SMC Class of 2014" },
+    { name: "Dr. Mustafa Tai", info: "SMC Class of 2014" },
     {
       name: "Dr. Mohammad Fahad Nasser",
-      info: "Founding Member | SMC Class of 2012",
+      info: "SMC Class of 2012",
     },
-    { name: "Dr. Hassan Ahmed", info: "Founding Member | SMC Class of 2012" },
-    { name: "Dr. Ahmer Mansuri", info: "Founding Member | SMC Class of 2014" },
+    { name: "Dr. Hassan Ahmed", info: "SMC Class of 2012" },
+    { name: "Dr. Ahmer Mansuri", info: "SMC Class of 2014" },
     {
       name: "Dr. Muhammad Fahad Javed",
-      info: "Founding Member | SMC Class of 2012",
+      info: "SMC Class of 2012",
     },
     {
       name: "Dr. Mohammad Zeeshan Nasser",
-      info: "Founding Member | SMC Class of 2012",
+      info: "SMC Class of 2012",
     },
     {
       name: "Dr. Syed Saad Nizami",
-      info: "Founding Member | SMC Class of 2014",
+      info: "SMC Class of 2014",
     },
     {
       name: "Dr. Syed Sohaib Nizami",
-      info: "Founding Member | SMC Class of 2014",
+      info: "SMC Class of 2014",
     },
-    { name: "Dr. Muhammad Zaid", info: "Founding Member | SMC Class of 2013" },
-    { name: "Dr. Ahzam Arif", info: "Founding Member | SMC Class of 2016" },
+    { name: "Dr. Muhammad Zaid", info: "SMC Class of 2013" },
+    { name: "Dr. Ahzam Arif", info: "SMC Class of 2016" },
     {
       name: "Dr. Mohammed Ali Alvi",
-      info: "Founding Member | SMC Class of 2016",
+      info: "SMC Class of 2016",
     },
   ];
 
