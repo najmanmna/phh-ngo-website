@@ -1,12 +1,37 @@
-import React from "react";
-import projectsData from "../data/projects.json";
+import React, { useEffect, useState } from "react";
+import { client } from "../utils/sanityClient";
 import { Link } from "react-router-dom";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export default function Projects() {
-  const ongoingProjects = projectsData
-    .filter((project) => project.type === "ongoing")
-    .slice(0, 4); // Show 4 projects only
+  const [ongoingProjects, setOngoingProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const data = await client.fetch(
+          `*[_type == "ongoingProject"]{
+            _id,
+            title,
+            "slug": slug.current,
+            "coverImage": coverImage.asset->url,
+            "detailedImage": detailedImage.asset->url,
+            description,
+            impactStats[]{
+              value,
+              label,
+              "icon": icon.asset->url
+            }
+          } | order(_createdAt desc)[0...4]`
+        );
+        setOngoingProjects(data);
+      } catch (err) {
+        console.error("Sanity fetch error:", err);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   return (
     <section
@@ -30,13 +55,13 @@ export default function Projects() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {ongoingProjects.map((project, idx) => (
+          {ongoingProjects.map((project) => (
             <div
-              key={idx}
+              key={project._id}
               className="rounded-xl overflow-hidden shadow-lg bg-white transition-transform hover:-translate-y-1"
             >
               <img
-                src={project.image}
+                src={project.coverImage}
                 alt={project.title}
                 className="w-full h-72 object-cover"
               />
@@ -44,14 +69,12 @@ export default function Projects() {
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   {project.title}
                 </h3>
-                {project.link && (
-                  <Link
-                    to={`/projects/${project.id}`}
-                    className="text-sm text-green-600 hover:underline inline-flex items-center gap-1"
-                  >
-                    Learn more <FaArrowUpRightFromSquare />
-                  </Link>
-                )}
+                <Link
+                  to={`/projects/${project.slug}`}
+                  className="text-sm text-green-600 hover:underline inline-flex items-center gap-1"
+                >
+                  Learn more <FaArrowUpRightFromSquare />
+                </Link>
               </div>
             </div>
           ))}

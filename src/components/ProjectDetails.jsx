@@ -1,31 +1,31 @@
 import React, { useState } from "react";
+import { PortableText } from "@portabletext/react";
 
 export default function ProjectDetails({ project }) {
   const [showEmail, setShowEmail] = useState(false);
-
-  const isFundProject = project.id === "Fund a Patient";
+  const isFundProject = project.slug?.current === "fund-a-patient";
 
   return (
     <div>
-      <h1 className="text-3xl text-primary text-center font-bold mb-10  ">
+      <h1 className="text-3xl text-primary text-center font-bold mb-10">
         {project.title}
       </h1>
+
       <div className="flex gap-8 flex-col md:flex-row">
-        {" "}
         <img
           src={project.detailedimage}
           alt={project.title}
-          className="mx-auto h-full w-3/4 md:w-1/2"
+          className="mx-auto h-full w-3/4 md:w-1/2 object-cover"
           loading="lazy"
         />
+
         <div className="right-container flex flex-col self-center w-3/4 md:w-1/2">
-          {/* Dynamic impact stats */}
           {project.impactStats && (
-            <div className="bg-green-50 rounded-xl shadow-md p-6  text-center mb-5 ">
+            <div className="bg-green-50 rounded-xl shadow-md p-6 text-center mb-5">
               <h2 className="text-xl font-extrabold mb-6 text-[#3c6130]">
                 OUR MONTHLY IMPACT
               </h2>
-              <div className="grid grid-cols-1 mt-5 mb-5 sm:grid-cols-3 gap-6 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                 {project.impactStats.map((item, idx) => (
                   <div key={idx}>
                     <img
@@ -45,39 +45,14 @@ export default function ProjectDetails({ project }) {
             </div>
           )}
 
-          <div className="text-md text-gray-700 mb-6 space-y-4">
-            {project.description.split("\n\n").map((block, index) => {
-              const lines = block
-                .split("\n")
-                .filter((line) => line.trim() !== "");
-              const isBulletList =
-                lines.length > 1 && lines.every((line) => line.length < 50);
-
-              const renderWithBold = (text) =>
-                text.split(/(\*\*.*?\*\*)/g).map((chunk, i) => {
-                  if (chunk.startsWith("**") && chunk.endsWith("**")) {
-                    return <strong key={i}>{chunk.slice(2, -2)}</strong>;
-                  }
-                  return chunk;
-                });
-
-              if (isBulletList) {
-                return (
-                  <ul key={index} className="list-disc pl-5">
-                    {lines.map((line, i) => (
-                      <li key={i}>{renderWithBold(line)}</li>
-                    ))}
-                  </ul>
-                );
-              }
-
-              return <p key={index}>{renderWithBold(block)}</p>;
-            })}
-          </div>
+          {project.description && (
+            <div className="text-md text-gray-700 mb-6 space-y-4 prose max-w-none">
+              <PortableText value={project.description} />
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Fund a Patient button */}
       {isFundProject && (
         <div className="text-center mt-10">
           {!showEmail ? (
