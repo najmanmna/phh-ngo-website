@@ -22,7 +22,7 @@ export default function Projects() {
               label,
               "icon": icon.asset->url
             }
-          } | order(_createdAt desc)[0...4]`
+          } | order(_createdAt desc)[0...8]`
         );
         setOngoingProjects(data);
       } catch (err) {
