@@ -137,7 +137,7 @@ const MeetTheTeam = () => {
 
           <div className="mb-10">
             <h2 className="text-xl md:text-2xl font-semibold text-white mb-4 bg-primary">
-              Office Bearers  ( 2025 - 26 )
+              Office Bearers ( 2025 - 26 )
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {officeBearers.map(({ role, name, class: classYear }) => (
@@ -154,7 +154,7 @@ const MeetTheTeam = () => {
           </div>
 
           <h2 className="text-xl md:text-2xl font-semibold text-white mb-10 bg-primary">
-            Executive Council Members
+            Executive Council Members ( 2025 - 26 )
           </h2>
 
           {departments.map(({ name, members }) => (
