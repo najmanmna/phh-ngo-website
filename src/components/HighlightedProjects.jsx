@@ -1,24 +1,46 @@
-import React, { useRef, useEffect } from "react";
-import highlightedProjects from "../data/highlightedProjects.json";
+import React, { useRef, useEffect, useState } from "react";
+import { client } from "../utils/sanityClient";
+import { urlFor } from "../utils/sanityImageUrl";
 import { gsap } from "gsap";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ProjectHighlights() {
+  const [highlightedProjects, setHighlightedProjects] = useState([]);
   const trackRef = useRef(null);
   const containerRef = useRef(null);
   const tl = useRef(null);
 
   useEffect(() => {
-    const track = trackRef.current;
+    // Fetch projects from Sanity
+    const fetchProjects = async () => {
+      try {
+        const data = await client.fetch(
+          `*[_type == "oneTimeProject"] | order(_createdAt desc){
+            _id,
+            title,
+            description,
+            image
+          }`
+        );
+        setHighlightedProjects(data);
+      } catch (err) {
+        console.error("Error fetching one-time projects:", err);
+      }
+    };
 
-    // Duplicate cards for infinite scrolling
+    fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || !highlightedProjects.length) return;
+
     const cards = track.querySelectorAll(".highlight-card");
     cards.forEach((card) => {
       const clone = card.cloneNode(true);
       track.appendChild(clone);
     });
 
-    // Animate the strip
     tl.current = gsap.to(track, {
       xPercent: -50,
       ease: "none",
@@ -26,24 +48,22 @@ export default function ProjectHighlights() {
       repeat: -1,
     });
 
-    // Pause on hover
     track.querySelectorAll(".highlight-card").forEach((card) => {
       card.addEventListener("mouseenter", () => tl.current.pause());
       card.addEventListener("mouseleave", () => tl.current.resume());
     });
 
     return () => {
-      tl.current.kill();
+      tl.current?.kill();
     };
-  }, []);
+  }, [highlightedProjects]);
 
-  // Manual scroll handlers
   const scrollLeft = () => {
-    containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    containerRef.current?.scrollBy({ left: -300, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    containerRef.current?.scrollBy({ left: 300, behavior: "smooth" });
   };
 
   return (
@@ -73,17 +93,17 @@ export default function ProjectHighlights() {
         <div ref={trackRef} className="flex gap-6 px-6 w-max">
           {highlightedProjects.map((proj, i) => (
             <div
-              key={i}
+              key={proj._id || i}
               className="highlight-card group w-[260px] h-[250px] [perspective:1000px] flex-shrink-0 cursor-pointer"
             >
               <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front Side */}
                 <div className="absolute inset-0 bg-white rounded-xl shadow-md overflow-hidden backface-hidden">
                   <img
-                    src={proj.image}
+                    src={urlFor(proj.image).width(400).format("webp").url()}
                     alt={proj.title}
                     className="h-full w-full object-cover"
-                    loading=""
+                    loading="lazy"
                   />
                   <div className="absolute bottom-0 w-full bg-primary/70 text-center font-semibold py-2 px-3">
                     <h3 className="text-white text-md font-bold text-center">

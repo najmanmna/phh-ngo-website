@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../utils/sanityClient";
+import { urlFor } from "../utils/sanityImageUrl";
 import { Link } from "react-router-dom";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
@@ -14,13 +15,13 @@ export default function Projects() {
             _id,
             title,
             "slug": slug.current,
-            "coverImage": coverImage.asset->url,
-            "detailedImage": detailedImage.asset->url,
+            coverImage,
+            detailedImage,
             description,
             impactStats[]{
               value,
               label,
-              "icon": icon.asset->url
+              icon
             }
           } | order(_createdAt desc)[0...8]`
         );
@@ -61,9 +62,10 @@ export default function Projects() {
               className="rounded-xl overflow-hidden shadow-lg bg-white transition-transform hover:-translate-y-1"
             >
               <img
-                src={project.coverImage}
+                src={urlFor(project.coverImage).width(600).format("webp").url()}
                 alt={project.title}
                 className="w-full h-72 object-cover"
+                loading="lazy"
               />
               <div className="p-4 text-left">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">

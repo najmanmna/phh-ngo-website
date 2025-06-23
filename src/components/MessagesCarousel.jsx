@@ -1,32 +1,46 @@
 import React, { useState, useEffect } from "react";
-import messages from "../data/messages.json";
-import { ChevronLeft, ChevronRight, Quote, MessageSquareText } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageSquareText } from "lucide-react";
+import { client } from "../utils/sanityClient";
+import { urlFor } from "../utils/sanityImageUrl";
 
 export default function MessagesCarousel() {
+  const [messages, setMessages] = useState([]);
   const [index, setIndex] = useState(0);
-  const total = messages.length;
 
-  const showMessages = () => {
-    // Get current and next message, wrapping if needed
-    const first = messages[index];
-    const second = messages[(index + 1) % total];
-    return [first, second];
-  };
-
-  const next = () => {
-    setIndex((prev) => (prev + 2) % total);
-  };
-
-  const prev = () => {
-    setIndex((prev) => (prev - 2 + total) % total);
-  };
+  useEffect(() => {
+    const fetchMessages = async () => {
+      const data = await client.fetch(`*[_type == "message"]{
+        name,
+        title,
+        message,
+        photo
+      }`);
+      setMessages(data);
+    };
+    fetchMessages();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 2) % total);
+      setIndex((prev) => (prev + 2) % messages.length);
     }, 8000);
     return () => clearInterval(interval);
-  }, [total]);
+  }, [messages]);
+
+  const next = () => {
+    setIndex((prev) => (prev + 2) % messages.length);
+  };
+
+  const prev = () => {
+    setIndex((prev) => (prev - 2 + messages.length) % messages.length);
+  };
+
+  const showMessages = () => {
+    if (messages.length === 0) return [];
+    const first = messages[index];
+    const second = messages[(index + 1) % messages.length];
+    return [first, second];
+  };
 
   return (
     <section className="py-20 bg-gray-50" style={{
@@ -55,7 +69,7 @@ export default function MessagesCarousel() {
                 <p className="text-gray-700 italic mb-6">"{msg.message}"</p>
                 <div className="flex flex-col items-center">
                   <img
-                    src={msg.photo}
+                    src={msg.photo ? urlFor(msg.photo).width(128).height(128).url() : ""}
                     alt={msg.name}
                     className="w-16 h-16 object-cover rounded-full mb-2"
                   />
@@ -67,20 +81,22 @@ export default function MessagesCarousel() {
           </div>
 
           {/* Controls */}
-          <div className="flex justify-between mt-8 px-12">
-            <button
-              onClick={prev}
-              className="p-2 rounded-full bg-white shadow hover:bg-gray-100"
-            >
-              <ChevronLeft />
-            </button>
-            <button
-              onClick={next}
-              className="p-2 rounded-full bg-white shadow hover:bg-gray-100"
-            >
-              <ChevronRight />
-            </button>
-          </div>
+          {messages.length > 2 && (
+            <div className="flex justify-between mt-8 px-12">
+              <button
+                onClick={prev}
+                className="p-2 rounded-full bg-white shadow hover:bg-gray-100"
+              >
+                <ChevronLeft />
+              </button>
+              <button
+                onClick={next}
+                className="p-2 rounded-full bg-white shadow hover:bg-gray-100"
+              >
+                <ChevronRight />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

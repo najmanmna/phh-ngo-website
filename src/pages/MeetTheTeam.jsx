@@ -123,7 +123,7 @@ const MeetTheTeam = () => {
       <section className="pt-16 sm:pt-28 px-6 py-12 bg-gradient-to-b from-lime-50 via-white to-lime-100 text-primary min-h-screen">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-2xl mt-10 md:text-4xl font-bold mb-10">
-            Meet the team behind our website.
+            Meet the Team
           </h1>
 
           <div className="mb-10">
@@ -137,7 +137,7 @@ const MeetTheTeam = () => {
 
           <div className="mb-10">
             <h2 className="text-xl md:text-2xl font-semibold text-white mb-4 bg-primary">
-              Office Bearers
+              Office Bearers  ( 2025 - 26 )
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {officeBearers.map(({ role, name, class: classYear }) => (
